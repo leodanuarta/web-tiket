@@ -35,6 +35,8 @@ $(function() {
     });
 });
 
+
+
 $(function() {
     $("form[name='registration']").validate({
         rules: {
@@ -69,3 +71,12 @@ $(function() {
         }
     });
 });
+
+// checkbox
+// $(terms() {
+//     var checkbox = $("#tac");
+//     if (!checkbox.checked) {
+//         function();        return;
+//     }
+//    $("#tac").submit();
+// });
