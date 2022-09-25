@@ -3,10 +3,15 @@
     /* background-image: "Assets/bled.svg"; */
 }
 
-.btn{
+.navbar:after{
+    background-color: white;
+}
+
+
+/* .btn{
     font-size: 14px;
     font-family: tiketOdysseyText, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
+} */
 
 
 .navbar-nav{
@@ -14,21 +19,30 @@
     font-family: tiketOdysseyText, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+/* second navbar */
+#secNav{
+    background-color: white;
+    box-shadow: 0px 5px 30px #C9C7C7;
+    /* display : none; */
+    /* z-index: 99; */
+}
+
 .awal{
     /* background-image: url("https://divedigital.id/wp-content/uploads/2020/06/seljalandsfoss-air-terjun-islandia-1024x619.jpg"); */
-    background-image: url("https://i0.wp.com/dianisa.com/wp-content/uploads/2019/02/Wallpaper-Pemandangan-Untuk-Desktop.jpg?fit=800%2C475&ssl=1");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    position: relative;
+    background: url('Assets/bg_pemandangan.png') no-repeat center;
+    /* background-repeat: no-repeat; */
+    /* background-size: 100%; */
+    background-size: cover;
+    /* width: 100%; */
+    /* height: 400px; */
+    /* position: relative; */
 }
 
 /* css search box sampai no 75*/
 
-.container{
-    margin-top :200px;
+.container-search{
+    margin-top :50px;
 }
-
-
 
 .google{
     border-top-left-radius: 32px !important;
@@ -74,86 +88,66 @@
     outline: 0px;
 }
 
-/* css login */
-body{
-    margin-top: 10px;
-    margin-bottom: 50px;
-    
-}
-
-a{
-    text-decoration: none !important;
-}
-
-h1,h2,h3{
-    font-family: 'Playlist Script', cursive;
-}
-
-.myform{
-    position : relative;
-    display: -ms-flexbox;
-    display: flex;
-    padding: 7%;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    width:100%;
-    pointer-events: auto;
-    background-color: #fff;
-    background-clip: padding-box;
-    border : 1px solid rgba(0,0,0,.2);
-    border-radius: 1.1rem;
-    outline: 0;
-    max-width: 500px;
-}
-
-.tx-tfm{
-    text-transform: uppercase;
-}
-
-.mybtn{
-    border-radius: 50px;
-    
-}
-
-.login-or{
-    position: relative;
-    color : #aaa;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-.span-or{
+.pesawat{
     display: block;
-    position: absolute;
-    left : 50%;
-    top: -2px;
-    margin-left: -25px;
-    background-color: #fff;
-    width: 50px;
-    text-align: center;
+    margin-left: auto;
+    margin-right: 10px;
+    height: 75px;
 }
 
-.hr-or{
-    height: 1px;
-    margin-top : 0px !important;
-    margin-bottom: 0px !important;
+.kereta{
+    display: block;
+    margin-left: 0;
+    margin-right: auto;
+    height: 75px;
 }
 
-.google{
-    color: #666;
+.circle-icon{
+    color: #fff;
+    font-size: 25px;
+}
+
+.row{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
     width: 100%;
-    height: 40px;
-    text-align: center;
-    outline: none;
-    border: 1px solid lightgrey;
 }
 
-form .error{
-    color : #ff0000;
+/* Caousel */
+.carousel-item img{
+    /* position: absolute; */
+    /* height: 500px; */
+    /* top: 0;
+    left: 0; */
+    width: 100%;
+    min-height:275px;
+    object-fit: cover;
+    /* object-position: center; */
+    /* height: 32rem; */
 }
 
-#second{display:none;}
+/* Destination */
+.featurette-divider {
+    margin: 5% 0; 
+}
 
+.title{
+    margin-top: 10%;
+    margin-bottom: 0%;
+}
+
+.subtitle{
+    margin-top: 5%;
+}
+
+.content{
+    text-align : justify;
+    margin-top: 5%;
+}
+
+.content-link{
+    margin-bottom: 5%;
+}
 
