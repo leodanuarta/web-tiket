@@ -35,8 +35,6 @@ $(function() {
     });
 });
 
-
-
 $(function() {
     $("form[name='registration']").validate({
         rules: {
@@ -51,9 +49,16 @@ $(function() {
             password: {
                 required: true,
                 minlength: 8
+            },
+            password2: {
+                required: true,
+                minlength : 8
+            },
+            tac : {
+                required : true,
             }
         },
-
+        
         messages: {
             firstname: "Masukkan Nama Depan",
             lastname: "Masukkan Nama Belakang",
@@ -63,6 +68,11 @@ $(function() {
                 required: "Masukkan Password",
                 minlength: "Minimal Password adalah 8 karakter"
             },
+            password2: {
+                required: "Ulangi Masukkan Password",
+                minlength: "Minimal Password adalah 8 karakter"
+            },
+            tac : "Mohon di klik!",
             email: "Mohon Masukkan Email yang Valid!"
         },
 
@@ -72,11 +82,19 @@ $(function() {
     });
 });
 
-// checkbox
-// $(terms() {
-//     var checkbox = $("#tac");
-//     if (!checkbox.checked) {
-//         function();        return;
-//     }
-//    $("#tac").submit();
-// });
+
+function forgotPassword(){
+    var email = prompt("Masukkan Email Anda Disini");
+    alert("Kode verifikasi telah dikirim. Silahkan periksa email Anda!");
+};
+
+
+function onChange() {
+    const password = document.querySelector('input[name=password]');
+    const confirm = document.querySelector('input[name=password2]');
+    if (confirm.value === password.value) {
+      confirm.setCustomValidity('');
+    } else {
+      confirm.setCustomValidity('Passwords do not match');
+    }
+}
