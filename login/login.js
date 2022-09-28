@@ -85,7 +85,9 @@ $(function() {
 
 function forgotPassword(){
     var email = prompt("Masukkan Email Anda Disini");
-    alert("Kode verifikasi telah dikirim. Silahkan periksa email Anda!");
+    if(email){
+        alert("Kode verifikasi telah dikirim. Silahkan periksa email Anda!");
+    }
 };
 
 
