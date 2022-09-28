@@ -180,3 +180,11 @@
     /* color: grey; */
     /* border: 6px solid rgba(255, 255, 255); */
 }
+
+.carousel ol li{
+    /* display: inline-block;
+    width: 50%;
+    margin-bottom: 12px; */
+    list-style-type: none;
+    margin: 3px;
+}
