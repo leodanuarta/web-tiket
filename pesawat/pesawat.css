@@ -1,0 +1,169 @@
+#secNav{
+    background-color: white;
+    box-shadow: 0px 5px 30px #C9C7C7;
+}
+
+/* background */
+.A1{
+    margin-top: 100px;
+    background-color: #B7D6DC;
+    /* height: 360px; */
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+/* banner */
+.A2 {
+    background-color: #B7D6DC;
+    /* width: 1262px; */
+    height: 80px;
+    margin-top: -10px;
+    /* panjang bawah */
+}
+
+.title-snk{
+    text-align: center;
+    font-weight: 700;
+}
+
+.vaksin{
+    width: 160px;
+    height: 160px;
+    display: flex;
+}
+
+/* carousel */
+.carousel-item img{
+    /* position: absolute; */
+    /* height: 500px; */
+    /* top: 0;
+    left: 0; */
+    width: 100%;
+    min-height:275px;
+    object-fit: cover;
+    /* margin-bottom:2%; */
+    /* object-position: center; */
+    /* height: 32rem; */
+}
+
+.contentBody{
+    /* margin-top: -22px; */
+    /* background-image: url('../Assets/warna.png');
+    background-repeat: repeat-x; */
+    /* background-color: pink; */
+}
+
+.image{
+    padding-top: 50px;
+    padding-bottom: 100px; 
+    width: 500px ;
+    height: 250px;
+    margin-left: 375px;
+}
+
+/* ticket box */
+.A3 {
+    margin-top: -70px;
+    border-radius: 5px;
+    width: 100%;
+    background-color: white;
+    /* height: 500px; */
+    /* panjnag atas */  
+    /* margin-bottom: 10px; */
+    /* margin-left: 5%; */
+    /* margin-top: -50px; */
+}
+
+/* logo */
+.a31{
+    border-bottom: 1px solid rgb(147, 147, 147);
+    padding-left: 70px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    display: flex;
+}
+
+.ikon1{
+    transform: rotate(60deg);
+}
+.ikon2{
+    transform: rotate(105deg);
+}
+.ikon{
+    margin-bottom:30px;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+
+.trip{
+    display: flex;
+}
+
+/* .co{
+    border-bottom: 1px solid rgb(147, 147, 147);
+} */
+
+/* data */
+.a32{
+    display: flex;
+    border-bottom: 1px solid rgb(147, 147, 147);
+}
+
+.data{
+    border: 1px solid rgb(147, 147, 147);
+    font-size: 12px;
+    padding : 15px;
+}
+
+.tombol{
+    padding-bottom: 20px;
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+.haa1{
+    border-right: 1px solid rgb(147, 147, 147);
+}
+
+.ha1{
+    margin-top: 10px;
+    width: 200px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+
+.iconF{
+    width: 30px;
+    height: 30px;
+}
+
+.pesawat{
+    display: block;
+    margin-left: auto;
+    margin-right: 10px;
+    height: 75px;
+    border: 5px solid rgba(255, 255, 255, .4);
+}
+
+.kereta{
+    display: block;
+    margin-left: 0;
+    margin-right: auto;
+    height: 75px;
+    border: 5px solid rgba(255, 255, 255, .4);
+}
+
+.circle-icon{
+    color: #fff;
+    font-size: 25px;
+}
+
+.row{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    width: 100%;
+}
+
