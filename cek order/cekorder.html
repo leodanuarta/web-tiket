@@ -10,24 +10,31 @@
     <title>Cek Pesanan Anda</title>
 </head>
 <body>
-    <!-- Second Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="secNav">
-    <div class="container">
-      <a class="navbar-brand" href="../main/main.html"><img src="../Assets/logo2.svg" width="150"></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse flex-row-reverse" id="navbarCollapse">
-        <div class="navbar-nav">
-          <a class="nav-link text-black font-weight px-2" href="#">Elite Rewards</a>
-          <a class="nav-link text-black font-weight px-2 mr-2" href="cekorder.html">Cek Order</a>
-          <form class="form-inline mt-2 mt-md-0">
-            <a class="nav-link bg-primary text-white font-weight-bold rounded px-3" href="../login/login.html">Login / Daftar</a>
-          </form>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="secNav">
+      <div class="container">
+        <a class="navbar-brand" href="../main/main.html"><img src="../Assets/logo2.svg" width="150"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-chevron-double-down" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+            <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+          </svg>
+        </button>
+        <div class="collapse navbar-collapse flex-row justify-content-between" id="navbarCollapse">
+          <div class="navbar-nav">
+            <a class="textNav nav-link font-weight-bold px-2" href="../pesawat/pesawat.html">Pesawat</a>
+            <a class="textNav nav-link font-weight-bold px-2" href="../kereta/kereta.html">Kereta</a> 
+          </div>
+          <div class="navbar-nav">
+            <!-- <a class="nav-link font-weight-bold px-2" href="#">Elite Rewards</a> -->
+            <a class="active nav-link font-weight-bold px-2 mr-2" href="../cek order/cekorder.html.html">Cek Order</a>
+            <form class="form-inline mt-2 mt-md-0">
+              <a class="nav-link bg-primary text-white font-weight-bold rounded px-3" href="../login/login.html">Login / Daftar</a>
+            </form>
+          </div>
         </div>
-      </div>
-    </div>  
-  </nav>
+      </div>  
+    </nav>
 
   <!-- form request cek order -->
   <div class="container-fluid">
@@ -46,12 +53,12 @@
                             <p class="text-muted mb-4">Isi Form Disini...</p>
                             <form action="">
                               <div class="form-group mb-3">
-                                  <input id="inputEmail" type="email" placeholder="Email" required="" class="form-control rounded-pill border-0 shadow-sm px-5 text-primary">
+                                  <input id="inputEmail" type="email" placeholder="Email" required="" class="form-control rounded-pill border-1 shadow-sm px-5 text-primary">
                               </div>
                               <div class="form-group mb-3">
-                                <input id="inputOrderId" type="text" placeholder="Id Pesanan" required="" class="form-control rounded-pill border-0 shadow-sm px-5 text-primary">
+                                <input id="inputOrderId" type="text" placeholder="Id Pesanan" required="" class="form-control rounded-pill border-1 shadow-sm px-5 text-primary">
                               </div>
-                              <button type="submit" class="btn btn-primary btn-block text-upppercase mb-2 rounded-pill shadow-sm">cek tiket</button>
+                              <button type="submit" class="btn btn-primary btn-block text-upppercase mb-2 rounded-pill shadow-sm">Cek Tiket</button>
                             </form>
                         </div>
                     </div>
@@ -59,11 +66,11 @@
             </div>
         </div>
     </div>
-
-
-
   </div>
-
+  
+  <footer>
+    <p class="text-center mt-10">&copy; 2022 Company, Inc. &bull; All Rights Reserved</p>
+  </footer>
 
 
 
