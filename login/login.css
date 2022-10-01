@@ -1,7 +1,6 @@
 body{
     margin-top: 10px;
     margin-bottom: 50px;
-    
 }
 
 a{
@@ -78,4 +77,6 @@ form .error{
     color : #ff0000;
 }
 
-#second{display:none;}
+#second{
+    display:none;
+}
