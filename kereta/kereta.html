@@ -17,12 +17,16 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="kereta.css">
 
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">
+
     <title>Cari Tiket Kereta Yuk!!!</title>
   </head>
 
   <body>
 
-  <!-- Second Navbar -->
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="secNav">
     <div class="container">
       <a class="navbar-brand" href="../main/main.html"><img src="../Assets/logo2.svg" width="150"></a>
@@ -38,8 +42,8 @@
           <a class="active textNav nav-link font-weight-bold px-2" href="../kereta/kereta.html">Kereta</a> 
         </div>
         <div class="navbar-nav">
-          <a class="nav-link font-weight-bold px-2" href="#">Elite Rewards</a>
-          <a class="nav-link font-weight-bold px-2 mr-2" href="#">Cek Order</a>
+          <!-- <a class="nav-link font-weight-bold px-2" href="#">Elite Rewards</a> -->
+          <a class="nav-link font-weight-bold px-2 mr-2" href="../cek order/cekorder.html">Cek Order</a>
           <form class="form-inline mt-2 mt-md-0">
             <a class="nav-link bg-primary text-white font-weight-bold rounded px-3" href="../login/login.html">Login / Daftar</a>
           </form>
@@ -135,7 +139,7 @@
                           <label for="select">Dari</label>
                           <img class="ikonn" src="../Assets/train1.png">
                           <div class="hihi">
-                            <input type="text" class="dari form-control" name="asal" placeholder="Kamu dari mana?">
+                            <input type="text" class="boxdk form-control" name="asal" placeholder="Kamu dari mana?" required>
                           </div>                                   
                                     <!-- selectnya disini yaw -->
                                     <!-- <select class="browser-default custom-select mb-4" id="select">
@@ -154,7 +158,7 @@
                           <img class="ikonn" src="../Assets/train2.png">
                           <div class="hihi">
                             <!-- <input type="text" placeholder="Kamu mau kemana?"> -->
-                            <input type="text" class="ke form-control" name="asal" placeholder="Kamu mau kemana?">
+                            <input type="text" class="boxdk form-control" name="asal" placeholder="Kamu mau kemana?" required>
                           </div>
                         </div>
                       </div> 
@@ -162,13 +166,13 @@
                       <div class="col-sm-6">  
                         <div class="ha1">
                           <label for="start">Berangkat</label>
-                          <input id="datepicker2" width="80%" placeholder="Departure"/>
+                          <input type="text" id="depart" width="80%" placeholder="Departure" required/>
                         </div>
                       </div>
-                      <div class="col-sm-6">
+                      <div class="col-sm-6" id="plg1">
                         <div class="ha1">
                           <label for="start">Pulang</label>
-                          <input id="datepicker" width="80%" placeholder="Arrived"/>
+                          <input type="text" id="return" width="80%" placeholder="Arrived" required/>
                         </div>
                       </div>
 
@@ -178,13 +182,13 @@
 
                       <div class="ha1 col-sm-1">
                         <label for="penumpang">Dewasa</label> <br>
-                        <input type="number" name="Dewasa" class="qty" id="qty-dewasa" min="1" value="1" style="width:70px">
+                        <input type="number" name="Dewasa" class="qty" id="qty-dewasa" min="1" value="1" style="width:70px" >
                         </div>
                           
                       
                       <div class=" ha1 col-sm-1">
                         <label for="penumpang">Bayi</label> <br>
-                        <input type="number" name="Dewasa" class="qty" id="qty-bayi" min="0" value="0" style="width:70px">
+                        <input type="number" name="Dewasa" class="qty" id="qty-bayi" min="0" value="0" style="width:70px" >
                       </div>
 
                     </div>  
