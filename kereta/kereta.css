@@ -8,7 +8,6 @@ body{
     font-size: medium;
 }
 
-
 /* background */
 .A1{ 
     margin-top: 100px;
@@ -40,27 +39,13 @@ body{
 
 /* carousel */
 .carousel-item img{
-    /* position: absolute; */
-    /* height: 500px; */
-    /* top: 0;
-    left: 0; */
     width: 100%;
     min-height:275px;
     object-fit: cover;
-    /* margin-bottom:2%; */
-    /* object-position: center; */
-    /* height: 32rem; */
 }
 
 .penumpang{
     margin-left: 30px;
-}
-
-.contentBody{
-    /* margin-top: -22px; */
-    /* background-image: url('../Assets/warna.png');
-    background-repeat: repeat-x; */
-    /* background-color: pink; */
 }
 
 .image{
@@ -77,11 +62,6 @@ body{
     border-radius: 5px;
     width: 100%;
     background-color: white;
-    /* height: 500px; */
-    /* panjnag atas */  
-    /* margin-bottom: 10px; */
-    /* margin-left: 5%; */
-    /* margin-top: -50px; */
 }
 
 /* logo */
@@ -108,10 +88,6 @@ body{
     display: flex;
 }
 
-/* .co{
-    border-bottom: 1px solid rgb(147, 147, 147);
-} */
-
 /* data */
 .a32{
     display: flex;
@@ -130,20 +106,8 @@ body{
     border:0px;
 }
 
-.dari{
+.boxdk{
     border-radius: 50px;
-    /* background-color: #B7D6DC; */
-}
-
-.ke{
-    border-radius: 50px;
-    /* background-color: #B7D6DC; */
-}
-
-.search-text{
-    /* font-weight: bold; */
-    /* color:whitesmoke; */
-    /* font-style: bold; */
 }
 
 .tombol{
@@ -151,8 +115,6 @@ body{
     margin-left: auto;
     margin-right: 10px;
 }
-
-/*  */
 
 .haa1{
     border-right: 1px solid rgb(147, 147, 147);
