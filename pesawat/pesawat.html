@@ -17,6 +17,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="pesawat.css">
 
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">
+
     <title>Cari Tiket Pesawat Yuk!!!</title>
   </head>
 
@@ -37,8 +41,8 @@
           <a class="textNav nav-link font-weight-bold px-2" href="../kereta/kereta.html">Kereta</a> 
         </div>
         <div class="navbar-nav">
-          <a class="nav-link font-weight-bold px-2" href="#">Elite Rewards</a>
-          <a class="nav-link font-weight-bold px-2 mr-2" href="#">Cek Order</a>
+          <!-- <a class="nav-link font-weight-bold px-2" href="#">Elite Rewards</a> -->
+          <a class="nav-link font-weight-bold px-2 mr-2" href="../cek order/cekorder.html">Cek Order</a>
           <form class="form-inline mt-2 mt-md-0">
             <a class="nav-link bg-primary text-white font-weight-bold rounded px-3" href="../login/login.html">Login / Daftar</a>
           </form>
@@ -136,7 +140,7 @@
                             <path d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Zm.894.448C7.111 2.02 7 2.569 7 3v4a.5.5 0 0 1-.276.447l-5.448 2.724a.5.5 0 0 0-.276.447v.792l5.418-.903a.5.5 0 0 1 .575.41l.5 3a.5.5 0 0 1-.14.437L6.708 15h2.586l-.647-.646a.5.5 0 0 1-.14-.436l.5-3a.5.5 0 0 1 .576-.411L15 11.41v-.792a.5.5 0 0 0-.276-.447L9.276 7.447A.5.5 0 0 1 9 7V3c0-.432-.11-.979-.322-1.401C8.458 1.159 8.213 1 8 1c-.213 0-.458.158-.678.599Z"/>
                           </svg>
                           <div class="hihi">
-                            <input type="text" class="dari form-control" placeholder="Kamu dari mana?">
+                            <input type="text" class="boxdk form-control" placeholder="Kamu dari mana?" required>
                           </div>                                   
                                     <!-- selectnya disini yaw -->
                                     <!-- <select class="browser-default custom-select mb-4" id="select">
@@ -156,7 +160,7 @@
                             <path d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Zm.894.448C7.111 2.02 7 2.569 7 3v4a.5.5 0 0 1-.276.447l-5.448 2.724a.5.5 0 0 0-.276.447v.792l5.418-.903a.5.5 0 0 1 .575.41l.5 3a.5.5 0 0 1-.14.437L6.708 15h2.586l-.647-.646a.5.5 0 0 1-.14-.436l.5-3a.5.5 0 0 1 .576-.411L15 11.41v-.792a.5.5 0 0 0-.276-.447L9.276 7.447A.5.5 0 0 1 9 7V3c0-.432-.11-.979-.322-1.401C8.458 1.159 8.213 1 8 1c-.213 0-.458.158-.678.599Z"/>
                           </svg>
                           <div class="hihi">
-                            <input type="text" class="ke form-control" placeholder="Kamu mau kemana?">
+                            <input type="text" class="boxdk form-control" placeholder="Kamu mau kemana?" required>
                           </div>
                         </div>
                       </div> 
@@ -164,21 +168,20 @@
                       <div class="col-sm-6">  
                         <div class="ha1">
                           <label for="start">Berangkat</label>
-                          <input id="datepicker2" type="date" width="80%" placeholder="Departure"/>
+                          <input type="text" id="depart" width="80%" placeholder="Departure" required/>
                         </div>
                       </div>
                       <div class="col-sm-6" id="plg1">
                         <div class="ha1">
                           <label for="start">Pulang</label>
-                          <input id="datepicker" type="date" width="80%" placeholder="Arrived"/>
+                          <input type="text" id="return" width="80%" placeholder="Arrived" required/>
                         </div>
                       </div>
 
-                    
                       <div class="col-sm-3">
                         <div class="ha1">
                             <label for="start">Kelas Penerbangan</label>
-                            <select name="Kelas">
+                            <select name="Kelas" class="kls-fly btn-block" required>
                               <option value="1">First Class</option>
                               <option value="2">Bussines</option>
                               <option value="3">Ekonomi</option>
@@ -192,7 +195,6 @@
                         <input type="number" name="Dewasa" class="qty" min="1" value="1" style="width:70px">
                         </div>
                       </div>
-                      <!-- MENDII jangan 1 kalo dia mau pesennya 1 yang anak doang gimana wkkw -->
                               
                       <div class="col-md-3">
                         <div class="ha11">
@@ -240,18 +242,21 @@
             </div>
             <div class="col-md-10">
               <br>
-              <span><ul class="text-justify">
-                <li>18 tahun ke atas wajib telah mendapatkan vaksin dosis ketiga (booster).</li>
-                <li>Usia 6-17 tahun wajib telah mendapatkan vaksin dosis kedua.</li>
-                <li>Usia di bawah 6 tahun dikecualikan terhadap syarat vaksinasi, namun wajib melakukan perjalanan dengan pendamping, yang telah memenuhi ketentuan vaksinasi Covid-19.</li>
-                <li>PPDN berstatus warga negara asing, berasal dari perjalanan luar negeri dengan usia 18 tahun ke atas wajib telah mendapatkan vaksin kedua</li>
-                <li>Usia 6-17 tahun berasal dari perjalanan luar negeri dikecualikan dari kewajiban vaksinasi</li>   
-              </ul> </span>
+              <span>
+                <ul class="container text-justify">
+                  <li>18 tahun ke atas wajib telah mendapatkan vaksin dosis ketiga (booster).</li>
+                  <li>Usia 6-17 tahun wajib telah mendapatkan vaksin dosis kedua.</li>
+                  <li>Usia di bawah 6 tahun dikecualikan terhadap syarat vaksinasi, namun wajib melakukan perjalanan dengan pendamping, yang telah memenuhi ketentuan vaksinasi Covid-19.</li>
+                  <li>PPDN berstatus warga negara asing, berasal dari perjalanan luar negeri dengan usia 18 tahun ke atas wajib telah mendapatkan vaksin kedua</li>
+                  <li>Usia 6-17 tahun berasal dari perjalanan luar negeri dikecualikan dari kewajiban vaksinasi</li>   
+                </ul>
+              </span>
             </div>
           </div>
         </div>
       </div>
     </div>
+    
     <hr class="featurette-divider">
 
     <!-- Footer -->
