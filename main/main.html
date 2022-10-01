@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="../Assets/logo1.svg" type="image/svg+xml" sizes="2x2">
     <title>PigiPigi</title>
-</head>
-<body>
+  </head>
+  <body>
   <div class = "awal">
     <!-- First Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light sticky-top">
@@ -56,13 +56,13 @@
     <!-- Circle Icon -->
     <div class="row">
       <div class="col textIcon">
-        <a style="text-decoration:none;" href="#">
+        <a style="text-decoration:none;" href="../pesawat/pesawat.html">
           <img class="rounded-circle pesawat" src="https://banner2.cleanpng.com/20180521/qwy/kisspng-airplane-computer-icons-icon-design-5b02fd07a28226.7227895415269225036656.jpg" alt="Pesawat">
           <h2 class="circle-icon text-right">Pesawat</h2>
         </a>
       </div>
       <div class="col textIcon">
-        <a style="text-decoration:none;" href="#">
+        <a style="text-decoration:none;" href="../kereta/kereta.html">
           <img class="rounded-circle kereta" src="https://lh4.ggpht.com/fXuIHycU2zzzR9xakkQST8ItglkGOAHMYtmJDU9BuEIAmD9Pf23lssphUL8vCmle=w300" alt="Kereta">
           <h2 class="circle-icon text-left">Kereta</h2>
         </a>
@@ -73,25 +73,24 @@
   <!-- Second Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="secNav">
     <div class="container">
-      <a class="navbar-brand" href="#"><img src="../Assets/logo2.svg" width="150"></a>
+      <a class="navbar-brand" href="../main/main.html"><img src="../Assets/logo2.svg" width="150"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-chevron-double-down" viewBox="0 0 16 16">
           <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
           <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
         </svg>
       </button>
-      <div class="collapse navbar-collapse flex-row-reverse justify-content-between" id="navbarCollapse">
-        
+      <div class="collapse navbar-collapse flex-row justify-content-between" id="navbarCollapse">
+        <div class="navbar-nav">
+          <a class="textNav nav-link font-weight-bold px-2" href="../pesawat/pesawat.html">Pesawat</a>
+          <a class="textNav nav-link font-weight-bold px-2" href="../kereta/kereta.html">Kereta</a> 
+        </div>
         <div class="navbar-nav">
           <a class="nav-link font-weight-bold px-2" href="#">Elite Rewards</a>
           <a class="nav-link font-weight-bold px-2 mr-2" href="#">Cek Order</a>
           <form class="form-inline mt-2 mt-md-0">
             <a class="nav-link bg-primary text-white font-weight-bold rounded px-3" href="../login/login.html">Login / Daftar</a>
           </form>
-        </div>
-        <div class="navbar-nav">
-          <a class="textNav nav-link font-weight-bold px-2" href="#">Pesawat</a>
-          <a class="textNav nav-link font-weight-bold px-2" href="#">Kereta</a> 
         </div>
       </div>
     </div>  
@@ -240,16 +239,17 @@
           <div class="col">
             <p class="text-center text-dark font-weight-bold" style="font-size: 150%;">Produk</p>
             <div class="d-flex justify-content-center">
-              <a style="text-decoration:none;"  href="#">
+              <a style="text-decoration:none;"  href="../pesawat/pesawat.html">
                 <img class="rounded-circle pesawat" src="https://banner2.cleanpng.com/20180521/qwy/kisspng-airplane-computer-icons-icon-design-5b02fd07a28226.7227895415269225036656.jpg" alt="Pesawat">
                 <p class="text-dark text-center mr-3">Pesawat</p>
               </a>
-              <a style="text-decoration:none;"  href="#">
+              <a style="text-decoration:none;"  href="../kereta/kereta.html">
                 <img class="rounded-circle kereta" src="https://lh4.ggpht.com/fXuIHycU2zzzR9xakkQST8ItglkGOAHMYtmJDU9BuEIAmD9Pf23lssphUL8vCmle=w300" alt="Kereta">
                 <p class="text-dark text-center">Kereta</p>
               </a>
             </div>
           </div>
+
           <div class="col">
             <p class="text-center text-dark font-weight-bold" style="font-size: 150%;">Ikuti Kami</p>
             <div class="d-flex justify-content-around">
@@ -292,10 +292,8 @@
       <p class="text-center">&copy; 2022 Company, Inc. &bull; All Rights Reserved</p>
     </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-  <script src="script.js"></script>
-</body>
-
-
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
