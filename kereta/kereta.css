@@ -7,9 +7,7 @@ body{
     font-family: 'verdana';
     font-size: medium;
 }
-/* emng gausa?
- kok diapus lagi???? apa sii kan <body> bukan class="body" OIYA DENG WKWK  yeeeeeeeee tapi ga ngaruhhhhhh mau . 
- ato ga    mmm begindang */
+
 
 /* background */
 .A1{ 
@@ -52,6 +50,10 @@ body{
     /* margin-bottom:2%; */
     /* object-position: center; */
     /* height: 32rem; */
+}
+
+.penumpang{
+    margin-left: 30px;
 }
 
 .contentBody{
@@ -130,7 +132,12 @@ body{
 
 .dari{
     border-radius: 50px;
-    background-color: #B7D6DC;
+    /* background-color: #B7D6DC; */
+}
+
+.ke{
+    border-radius: 50px;
+    /* background-color: #B7D6DC; */
 }
 
 .search-text{
@@ -140,29 +147,12 @@ body{
 }
 
 .tombol{
-    /* display: flex; */
     padding-bottom: 20px;
     margin-left: auto;
     margin-right: 10px;
-    /* padding:50px;  */
-    /* margin-left: 70%; */
-    /* margin-left: 899px; */
-    
-        
-    /* kolom chat wkwkwk
-    
-    
-    dah tuh tombolnya di kanan wkwkkw di gw ilang kalo dikecilin wkwkwk oh ada deh wkkw
-    ini responsiffff tapi segitu doangkkkkk
-    oh kalo lebar msh agak tengah ya madksud?
-
-    gimana maksudnya kwkw
-    NOH UDAHHHHHHH BISAAA KANAN
-
-    wii diapain kwkkw
-    ih 
-    */
 }
+
+/*  */
 
 .haa1{
     border-right: 1px solid rgb(147, 147, 147);
@@ -209,4 +199,9 @@ body{
     width: 100%;
 }
 
-
+.qty{
+    border-radius: 50px;
+    border:3px solid #B7D6DC;
+    padding-left: 10px;
+    background-color:#B7D6DC;
+}
