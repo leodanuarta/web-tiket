@@ -40,23 +40,9 @@ body{
 
 /* carousel */
 .carousel-item img{
-    /* position: absolute; */
-    /* height: 500px; */
-    /* top: 0;
-    left: 0; */
     width: 100%;
     min-height:275px;
     object-fit: cover;
-    /* margin-bottom:2%; */
-    /* object-position: center; */
-    /* height: 32rem; */
-}
-
-.contentBody{
-    /* margin-top: -22px; */
-    /* background-image: url('../Assets/warna.png');
-    background-repeat: repeat-x; */
-    /* background-color: pink; */
 }
 
 .image{
@@ -143,14 +129,8 @@ body{
     border:0px;
 }
 
-.dari{
+.boxdk{
     border-radius: 50px;
-    /* background-color: #B7D6DC; */
-}
-
-.ke{
-    border-radius: 50px;
-    /* background-color: #B7D6DC; */
 }
 
 .iconF{
@@ -192,4 +172,9 @@ body{
     border:3px solid #B7D6DC;
     padding-left: 10px;
     background-color:#B7D6DC;
+}
+
+.kls-fly{
+    border-radius:50px;
+    border:3px solid #B7D6DC;
 }
