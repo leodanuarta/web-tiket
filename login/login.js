@@ -10,7 +10,6 @@ $("#signin").click(function() {
     });
 });
 
-
 $(function() {
     $("form[name='login']").validate({
         rules: {
@@ -82,14 +81,12 @@ $(function() {
     });
 });
 
-
 function forgotPassword(){
     var email = prompt("Masukkan Email Anda Disini");
     if(email){
         alert("Kode verifikasi telah dikirim. Silahkan periksa email Anda!");
     }
 };
-
 
 function onChange() {
     const password = document.querySelector('input[name=password]');
