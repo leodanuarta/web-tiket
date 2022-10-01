@@ -1,52 +1,24 @@
 .navbar{
     background-color: transparent;
-    /* background-image: "Assets/bled.svg"; */
 }
-
-
-/* .btn{
-    font-size: 14px;
-    font-family: tiketOdysseyText, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-} */
-
 
 .navbar-nav{
     font-size: 14px;
     font-family: Verdana, tiketOdysseyText, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-/* 
-.textNav{
-    color : red;
-    font-size: 20px;
-} */
-
-/* .textNav:hover{
-    color: yellow;
-    background-color: red;
-}*/
 
 /* second navbar */
 #secNav{
     background-color: white;
     box-shadow: 0px 5px 30px #C9C7C7;
-    /* transition-duration: 4s;
-    transition-delay: 2s; */
     display : none;
-    /* z-index: 99; */
 }
 
 .awal{
-    /* background-image: url("https://divedigital.id/wp-content/uploads/2020/06/seljalandsfoss-air-terjun-islandia-1024x619.jpg"); */
     background: url('../Assets/bg_pemandangan.png') no-repeat center;
-    /* background-repeat: no-repeat; */
-    /* background-size: 100%; */
     background-size: cover;
-    /* width: 100%; */
     height: 400px;
-    /* position: relative; */
 }
-
-/* css search box sampai no 75*/
 
 .container-search{
     margin-top :50px;
@@ -91,7 +63,7 @@
     width : 100%;
 }
 
-.input-text:focus {  /* masih untuk search, untuk border input textnya ketika di klik */
+.input-text:focus { 
     box-shadow: 0px 0px 0px;
     outline: 0px;
 }
@@ -139,20 +111,14 @@
 
 /* Caousel */
 .carousel-item img{
-    /* position: absolute; */
-    /* height: 500px; */
-    /* top: 0;
-    left: 0; */
     width: 100%;
     min-height:275px;
     object-fit: cover;
     margin-bottom:2%;
-    /* object-position: center; */
-    /* height: 32rem; */
 }
 
 /* Destination */
-.featurette-divider {
+.hr-destination {
     margin: 5% 0; 
 }
 
@@ -177,14 +143,9 @@
 .iconF{
     width: 30px;
     height: 30px;
-    /* color: grey; */
-    /* border: 6px solid rgba(255, 255, 255); */
 }
 
 .carousel ol li{
-    /* display: inline-block;
-    width: 50%;
-    margin-bottom: 12px; */
     list-style-type: none;
     margin: 3px;
 }
