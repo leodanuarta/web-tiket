@@ -109,9 +109,24 @@ body{
     border-right: 1px solid rgb(147, 147, 147);
 }
 
-.ha1{
+/* .ha1{
     margin-top: 10px;
     width: 200px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+
+.ha11{
+    margin-top: 10px;
+    width: 100px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+} */
+
+.ha1{
+    margin-top: 10px;
+    width: 50%;
+    min-width: 150px;
     margin-left: 50px;
     margin-bottom: 20px;
 }
