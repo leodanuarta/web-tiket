@@ -31,7 +31,8 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Password</label>
-                                    <input type="password" name="password" id="password" class="form-control" aria-describedby="emailHelp" placeholder="Masukkan Password">
+                                    <span class="hsPw"><i id="eye" class="fa fa-eye input-eye-icon"></i></span>
+                                    <input type="password" name="password" id="password" class="form-control" aria-describedby="emailHelp" placeholder="Masukkan Password" pw-shown="false">
                                 </div>
                                 <div class="form-group">
                                     <p class="text-center">Lupa Password ? <a href="#" id=""
@@ -89,16 +90,21 @@
                                 <form action="" method="post" name="login">
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Email</label>
-                                        <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Masukkan email">     
+                                        <input type="email" name="email" class="form-control" id="email1" aria-describedby="emailHelp" placeholder="Masukkan email">     
                                     </div>
-                                <div class="form-group">
+                                    <div class="form-group">
                                         <label for="exampleInputEmail1">Password</label>
-                                        <input type="password" name="password" id="password" class="form-control" aria-describedby="emailHelp" placeholder="Masukkan Password" onchange="onChange();">
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Confirm Password</label>
-                                    <input type="password" name="password2" id="password2" class="form-control" aria-describedby="emailHelp" placeholder="Masukkan Password" onchange="onChange();">
-                                </div>
+                                        <span class="hsPw"><i id="eye1" class="fa fa-eye input-eye-icon"></i></span>
+                                        <input type="password" name="password1" id="password1" class="form-control" aria-describedby="emailHelp" placeholder="Masukkan Password">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Confirm Password</label>
+                                        <span class="hsPw"><i id="eye2" class="fa fa-eye input-eye-icon"></i></span>
+                                        <input type="password" name="confirm_password" id="confirm_password" class="form-control" aria-describedby="emailHelp" placeholder="Masukkan Password">
+                                        
+                                        <span id="confirm_password_msg"></span>
+                                    </div>
+                                <!-- </form> -->
                                 <div class="form-group text-center">
                                     <input type="checkbox" name="tac" id="tac" class="" aria-describedby="emailHelp" placeholder="">  
                                     <label for="exampleInputEmail1">By sign up you accept our <a href="#">Terms Of Us</a></label>
@@ -111,8 +117,8 @@
                                         <p class="text-center">Sudah Memiliki Akun ?<a href="#" id="signin"> Login Dsini</a></p>
                                     </div>
                                 </div>
-                            </div>
-                        </form>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
