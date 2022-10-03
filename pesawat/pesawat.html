@@ -103,134 +103,146 @@
     </div>
 
     <div class="container">
-      <!-- <div class="contentBody">
-        <div class="final">
-          <div class="p3"> -->
-            <!-- cari tiket -->
-            <div class="A3 shadow rounded">
-                <!-- ikon -->
-              <div class="ikon">
-                <img src="../Assets/pesawat.svg" width="60">
-                <span><b style="margin-left: 10px;"> Cari Tiket di Bawah </b></span>
-                <br>
-              </div>
-              <form>
-                <div class="container">
-                  <div class="form-group">
-                    <div class="a31">
-                      <div class="form-checkbox">
-                        <input type="radio" id="one-go" name="trip" value="flight-trip" onclick="disPul()">
-                        <label for="sekali">Sekali Jalan</label>
-                      </div>
-                      <div style="margin-left: 50px;">
-                        <input type="radio" id="two-go" name="trip" value="flight-trip" onclick="pul()">
-                        <label for="pp">Pulang/Pergi</label>
-                      </div>
-                    </div>
+      <!-- cari tiket -->
+      <div class="A3 shadow rounded">
+        <!-- ikon -->
+        <div class="ikon">
+          <img src="../Assets/pesawat.svg" width="60">
+          <span><b style="margin-left: 10px;"> Cari Tiket di Bawah </b></span>
+          <br>
+        </div>
+          <form>
+            <div class="container">
+              <!-- <div class="form-group">
+                <div class="a31">
+                  <div class="form-checkbox">
+                    <input type="radio" id="one-go" name="trip" value="flight-trip" onclick="disPul()" required="">
+                    <label for="sekali">Sekali Jalan</label>
                   </div>
+                  <div style="margin-left: 50px;">
+                    <input type="radio" id="two-go" name="trip" value="flight-trip" onclick="pul()" required="">
+                    <label for="pp">Pulang-Pergi</label>
+                  </div>
+                </div>
+              </div> -->
                    
-                  <hr>
+              <hr>
 
-                  <div class="co">                   
-                    <div class="row">
-                      <div class="col-sm-6">
-                        <div class="ha1">
-                          <label for="select">Dari</label>
-                          <svg class="ikon1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-airplane" viewBox="0 0 20 20">
-                            <path d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Zm.894.448C7.111 2.02 7 2.569 7 3v4a.5.5 0 0 1-.276.447l-5.448 2.724a.5.5 0 0 0-.276.447v.792l5.418-.903a.5.5 0 0 1 .575.41l.5 3a.5.5 0 0 1-.14.437L6.708 15h2.586l-.647-.646a.5.5 0 0 1-.14-.436l.5-3a.5.5 0 0 1 .576-.411L15 11.41v-.792a.5.5 0 0 0-.276-.447L9.276 7.447A.5.5 0 0 1 9 7V3c0-.432-.11-.979-.322-1.401C8.458 1.159 8.213 1 8 1c-.213 0-.458.158-.678.599Z"/>
-                          </svg>
-                          <div class="hihi">
-                            <input type="text" class="boxdk form-control" placeholder="Kamu dari mana?" required>
-                          </div>                                   
+              <div class="container">                   
+                <div class="row">
+                  <!-- <div class="container"> -->
+                  <div class="col-sm-6">
+                    <div class="ha1">
+                      <label for="select">Dari</label>
+                      <svg class="ikon1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-airplane" viewBox="0 0 20 20">
+                        <path d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Zm.894.448C7.111 2.02 7 2.569 7 3v4a.5.5 0 0 1-.276.447l-5.448 2.724a.5.5 0 0 0-.276.447v.792l5.418-.903a.5.5 0 0 1 .575.41l.5 3a.5.5 0 0 1-.14.437L6.708 15h2.586l-.647-.646a.5.5 0 0 1-.14-.436l.5-3a.5.5 0 0 1 .576-.411L15 11.41v-.792a.5.5 0 0 0-.276-.447L9.276 7.447A.5.5 0 0 1 9 7V3c0-.432-.11-.979-.322-1.401C8.458 1.159 8.213 1 8 1c-.213 0-.458.158-.678.599Z"/>
+                      </svg>
+                      <!-- <div class="hihi">
+                        <input type="text" class="boxdk form-control" placeholder="Kamu dari mana?" required>
+                      </div>                                    -->
                                     <!-- selectnya disini yaw -->
-                                    <!-- <select class="browser-default custom-select mb-4" id="select">
-                                      <option value="" disabled="" selected="">Mau Terbang Dari Mana ?</option>
+                                  <div class="hihi">  
+                                    <select class="browser-default custom-select mb-4" id="select" required>
+                                      <!-- <option value="" disabled="" selected="">Mau Terbang Dari Mana ?</option> -->
                                       <option value="1">Jakarta</option>
                                       <option value="2">Bali</option>
                                       <option value="3">Medan</option>
-                                      <option value="4">...</option>
-                                  </select> -->
-                        </div>
-                      </div>
-                          
-                      <div class="col-sm-6">
-                        <div class="ha1">
-                          <label for="select">Ke</label>
-                          <svg class="ikon2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-airplane" viewBox="0 0 20 20">
-                            <path d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Zm.894.448C7.111 2.02 7 2.569 7 3v4a.5.5 0 0 1-.276.447l-5.448 2.724a.5.5 0 0 0-.276.447v.792l5.418-.903a.5.5 0 0 1 .575.41l.5 3a.5.5 0 0 1-.14.437L6.708 15h2.586l-.647-.646a.5.5 0 0 1-.14-.436l.5-3a.5.5 0 0 1 .576-.411L15 11.41v-.792a.5.5 0 0 0-.276-.447L9.276 7.447A.5.5 0 0 1 9 7V3c0-.432-.11-.979-.322-1.401C8.458 1.159 8.213 1 8 1c-.213 0-.458.158-.678.599Z"/>
-                          </svg>
-                          <div class="hihi">
-                            <input type="text" class="boxdk form-control" placeholder="Kamu mau kemana?" required>
-                          </div>
-                        </div>
-                      </div> 
-
-                      <div class="col-sm-6">  
-                        <div class="ha1">
-                          <label for="start">Berangkat</label>
-                          <input type="text" id="depart" width="80%" placeholder="Departure" required/>
-                        </div>
-                      </div>
-                      <div class="col-sm-6" id="plg1">
-                        <div class="ha1">
-                          <label for="start">Pulang</label>
-                          <input type="text" id="return" width="80%" placeholder="Arrived" required/>
-                        </div>
-                      </div>
-
-                      <div class="col-sm-3">
-                        <div class="ha1">
-                            <label for="start">Kelas Penerbangan</label>
-                            <select name="Kelas" class="kls-fly btn-block" required>
-                              <option value="1">First Class</option>
-                              <option value="2">Bussines</option>
-                              <option value="3">Ekonomi</option>
-                            </select>
-                        </div>
-                      </div>
-
-                      <div class="col-md-3">
-                        <div class="ha11">
-                        <label for="penumpang">Dewasa</label> <br>
-                        <input type="number" name="Dewasa" class="qty" min="1" value="1" style="width:70px">
-                        </div>
-                      </div>
-                              
-                      <div class="col-md-3">
-                        <div class="ha11">
-                          <label for="penumpang">Anak-Anak</label> <br>
-                          <input type="number" name="Dewasa" class="qty" min="0" value="0" style="width:70px">
-                        </div>
-                      </div>
-
-                      <div class="col-md 3">
-                        <div class="ha11">
-                          <label for="penumpang">Bayi</label> <br>
-                          <input type="number" name="Dewasa" class="qty" min="0" value="0" style="width:70px">
-                        </div>
-                      </div>   
+                                      <!-- <option value="4">...</option> -->
+                                    </select>
+                                  </div>
+                    </div>
                   </div>
-
-                  <hr>
-
-                  <div class="row"> 
-                    <div class="tombol">
-                      <div class="ha1"> 
-                        <button type="submit" class="btn-cari btn-block btn-warning search-text" id="searchButton">
-                          Cari Penerbangan <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                          <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                        </svg>
-                      </button>
+                          
+                  <div class="col-sm-6">
+                    <div class="ha1">
+                      <label for="select">Ke</label>
+                      <svg class="ikon2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-airplane" viewBox="0 0 20 20">
+                        <path d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Zm.894.448C7.111 2.02 7 2.569 7 3v4a.5.5 0 0 1-.276.447l-5.448 2.724a.5.5 0 0 0-.276.447v.792l5.418-.903a.5.5 0 0 1 .575.41l.5 3a.5.5 0 0 1-.14.437L6.708 15h2.586l-.647-.646a.5.5 0 0 1-.14-.436l.5-3a.5.5 0 0 1 .576-.411L15 11.41v-.792a.5.5 0 0 0-.276-.447L9.276 7.447A.5.5 0 0 1 9 7V3c0-.432-.11-.979-.322-1.401C8.458 1.159 8.213 1 8 1c-.213 0-.458.158-.678.599Z"/>
+                      </svg>
+                      <div class="hihi">
+                        <!-- <input type="text" class="boxdk form-control" placeholder="Kamu mau kemana?" required> -->
+                        <select class="browser-default custom-select mb-4" id="select" required>
+                          <!-- <option value="" disabled="" selected="">Mau Terbang Dari Mana ?</option> -->
+                          <option value="1">Jakarta</option>
+                          <option value="2">Bali</option>
+                          <option value="3">Medan</option>
+                          <!-- <option value="4">...</option> -->
+                        </select>
                       </div>
                     </div>
+                  </div> 
+                </div>
+                  
+                <div class="row">
+                  <div class="col-sm-6">  
+                    <div class="ha1">
+                      <label for="start">Berangkat</label>
+                      <input type="text" id="depart" width="80%" placeholder="Departure" required/>
+                    </div>
+                  </div>
+                  <div class="col-sm-6" id="plg1">
+                    <div class="ha1">
+                      <input type="checkbox" id="check-pul" value="pulang">
+                      <label for="start">Pulang</label>
+                      <input type="text" id="return" width="80%" placeholder="Arrived" required disabled="disabled"/>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="row">
+
+                  <div class="col-md-3">
+                    <div class="ha1">
+                      <label for="start">Kelas Penerbangan</label>
+                      <select name="Kelas" class="kls-fly btn-block" required>
+                        <option value="1">First Class</option>
+                        <option value="2">Bussines</option>
+                        <option value="3">Ekonomi</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3">
+                    <div class="ha11">
+                      <label for="penumpang">Dewasa</label> <br>
+                      <input type="number" name="Dewasa" class="qty" min="1" value="1" style="width:70px">
+                    </div>
+                  </div>
+                              
+                  <div class="col-md-3">
+                    <div class="ha11">
+                      <label for="penumpang">Anak-Anak</label> <br>
+                      <input type="number" name="Dewasa" class="qty" min="0" value="0" style="width:70px">
+                    </div>
+                  </div>
+
+                  <div class="col-md 3">
+                    <div class="ha11">
+                      <label for="penumpang">Bayi</label> <br>
+                      <input type="number" name="Dewasa" class="qty" min="0" value="0" style="width:70px">
+                    </div>
+                  </div>   
+                </div>
+
+                <hr>
+
+                <div class="row"> 
+                  <div class="tombol">
+                    <button type="submit" class="btn-cari btn-block btn-warning search-text" id="searchButton">
+                      Cari Penerbangan 
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                      </svg>
+                    </button>
                   </div>
                 </div>
               </div>
             </div>
+            <!-- </div> -->
           </form>
-        </div>
-
-        <br><br>
+        <!-- </div> -->
+      </div>
+      <br><br>
         <hr class="featurette-divider">
 
         <div>
@@ -254,7 +266,7 @@
             </div>
           </div>
         </div>
-      </div>
+      
     </div>
     
     <hr class="featurette-divider">
