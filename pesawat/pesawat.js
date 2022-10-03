@@ -1,5 +1,5 @@
-// $('#datepicker').datepicker();
-// $('#datepicker2').datepicker();
+// $('#depart').datepicker();
+// $('#return').datepicker();
 
 $(document).ready(function (){
     var minDate = new Date();
@@ -22,9 +22,45 @@ $(document).ready(function (){
             $('#depart').datepicker("option", "minDate", selectedDate);
         }
     });
+})
+
+
+// var input = document.querySelector("#check-pul");
+// var date = document.querySelector('#return');
+// var icondate = document.querySelector(".gj-icon");
+
+// date.disabled = true;
+// icondate.disabled = true;
+
+// input.addEventListener("change", stateHandle);
+
+// function stateHandle(){
+//     if (document.querySelector("#check-pul").value === "") {
+//         date.disabled = true; //button remains disabled
+//     } else {
+//         date.disabled = false; //button is enabled
+//     }
+// }
+
+// var date = document.querySelector('#return');
+
+// function untuk checkbox disable dan enable date
+$(document).ready(function() {
+    $('#check-pul').on('input change', function(){
+        if($(this).val() == "pulang"){
+            $('#return').prop('disabled', false);
+        }
+        else{
+            $('#return').prop('disabled', false).empty();
+        }
+    });
 });
 
+
+// .disabled = true;
+
 // var disPul = $('#datepicker').disabled();
+
 
 function disPul(){
     document.getElementById("plg1").style.visibility="hidden"; 
