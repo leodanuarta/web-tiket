@@ -45,16 +45,18 @@ $(document).ready(function (){
 // var date = document.querySelector('#return');
 
 // function untuk checkbox disable dan enable date
-$(document).ready(function() {
-    $('#check-pul').on('input change', function(){
-        if($(this).val() == "pulang"){
-            $('#return').prop('disabled', false);
-        }
-        else{
-            $('#return').prop('disabled', false).empty();
-        }
-    });
-});
+// //$(document).ready(function() {
+//     $('#check-pul').on('input change', function(){
+//         if($(this).checked = true){
+//             $('#return').prop('disabled', false);
+//             $("#check-pul").prop("checked", true); //function untuk mengecek dia centang atau tidak
+//         }
+//          if($(this).checked = false)
+//         {
+//             $("#check-pul").prop("checked", false);
+//         }
+//     });
+// //});
 
 
 // .disabled = true;
@@ -68,4 +70,14 @@ function disPul(){
 
 function pul(){
     document.getElementById("plg1").style.visibility="visible";
+}
+
+function check()
+{
+    $('#return').prop('disabled', false);   
+}
+
+function unCheck()
+{
+    document.getElementById("check-pul").checked = false;
 }
