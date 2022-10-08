@@ -12,7 +12,6 @@ body{
 .A1{ 
     margin-top: 100px;
     background-color: #B7D6DC;
-    /* height: 360px; */
     padding-top: 30px;
     padding-bottom: 10px;
 }
@@ -20,10 +19,8 @@ body{
 /* banner */
 .A2 {
     background-color: #B7D6DC;
-    /* width: 1262px; */
     height: 80px;
     margin-top: -10px;
-    /* panjang bawah */
 }
 
 .title-snk{
@@ -62,6 +59,7 @@ body{
     border-radius: 5px;
     width: 100%;
     background-color: white;
+    padding-bottom: 25px;
 }
 
 /* logo */
