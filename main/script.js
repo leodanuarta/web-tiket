@@ -1,5 +1,3 @@
-// When the user scrolls down 20px from the top of the document, show the button
-
 window.onscroll = function () {
     scrollFunction();
   };
@@ -11,6 +9,7 @@ function scrollFunction() {
     ){
       secNav.style.display = "block";
       navbar.style.display = "none";
+
     }else {
       secNav.style.display = "none";
       navbar.style.display = "block";
