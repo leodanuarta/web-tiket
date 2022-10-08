@@ -1,7 +1,3 @@
-// $('#datepicker').datepicker();
-
-// $('#datepicker2').datepicker();
-
 $(document).ready(function (){
     var minDate = new Date();
     $("#depart").datepicker({
@@ -24,3 +20,21 @@ $(document).ready(function (){
         }
     });
 });
+
+function disPul(){
+    document.getElementById("plg1").style.visibility="hidden"; 
+} 
+
+function pul(){
+    document.getElementById("plg1").style.visibility="visible";
+}
+
+function check()
+{
+    $('#return').prop('disabled', false);   
+}
+
+function unCheck()
+{
+    document.getElementById("check-pul").checked = false;
+}
