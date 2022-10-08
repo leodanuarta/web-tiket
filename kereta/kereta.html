@@ -42,7 +42,6 @@
           <a class="active textNav nav-link font-weight-bold px-2" href="../kereta/kereta.html">Kereta</a> 
         </div>
         <div class="navbar-nav">
-          <!-- <a class="nav-link font-weight-bold px-2" href="#">Elite Rewards</a> -->
           <a class="nav-link font-weight-bold px-2 mr-2" href="../cek order/cekorder.html">Cek Order</a>
           <form class="form-inline mt-2 mt-md-0">
             <a class="nav-link bg-primary text-white font-weight-bold rounded px-3" href="../login/login.html">Login / Daftar</a>
@@ -56,18 +55,13 @@
 
     <!-- Carousel -->
     <div id="carouselExampleIndicators" class="carousel slide A1" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <!-- <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li> -->
-        <li data-target="#carouselExampleIndicators" data-slide-to="1" class="active"></li>
+      <ol class="carousel-indicators"><li data-target="#carouselExampleIndicators" data-slide-to="1" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
       </ol>
       <div class="carousel-inner">
-        <!-- <div class="carousel-item active">
-          <img class="d-block w-100" src="../Assets/carousel_1.png"  alt="First slide">
-        </div> -->
         <div class="carousel-item active">
           <img class="d-block w-100" src="../Assets/carousel_2.png" alt="First slide">
         </div>
@@ -85,14 +79,12 @@
         </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" style="color: black;" class="bi bi-chevron-left" viewBox="0 0 16 16">
           <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
         </svg>
         <span class="sr-only">Previous</span>
       </a>
       <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" style="color: black;" class="bi bi-chevron-right" viewBox="0 0 16 16">
           <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
         </svg>
@@ -100,188 +92,150 @@
       </a>
     </div>
 
-    <div class="A2">
-      
-    </div>
+    <div class="A2"></div>
 
     <div class="container">
-      <!-- <div class="contentBody">
-        <div class="final">
-          <div class="p3"> -->
-            <!-- cari tiket -->
-            <div class="A3 shadow rounded">
-                <!-- ikon -->
-              <div class="ikon">
-                <img src="../Assets/kereta.svg" width="50">
-                <span><b style="margin-left: 10px;"> Cari Tiket di Bawah </b></span>
-                <br>
-              </div>
-              <form class="my-form">
-                <div class="container">
-                  <div class="form-group">
-                    <hr>
-                    <!-- <div class="a31">
-                      <div class="form-checkbox">
-                        <input type="radio" id="one-go" name="trip" value="flight-trip" checked>
-                        <label for="sekali">Sekali Jalan</label>
-                      </div>
-                      <div style="margin-left: 50px;">
-                        <input type="radio" id="two-go" name="trip" value="flight-trip" checked>
-                        <label for="pp">Pulang/Pergi</label>
-                      </div>
-                    </div> -->
-                  </div>
+      <div class="A3 shadow rounded">
+        <!-- ikon -->
+        <div class="ikon">
+          <img src="../Assets/kereta.svg" width="50">
+          <span><b style="margin-left: 10px;"> Cari Tiket di Bawah </b></span>
+          <br>
+        </div>
+        <form class="my-form">
+        <div class="container">
+          <div class="form-group">
+            <hr>
+          </div>
                   
-                  <div class="co">                   
-                    <div class="row">
-                      <div class="col-sm-6">
-                        <div class="ha1">
-                          <label for="select">Dari</label>
-                          <img class="ikonn" src="../Assets/train1.png">
-                          <div class="hihi">
-                            <input type="text" class="boxdk form-control" name="asal" placeholder="Kamu dari mana?" required>
-                          </div>                                   
-                                    <!-- selectnya disini yaw -->
-                                    <!-- <select class="browser-default custom-select mb-4" id="select">
-                                      <option value="" disabled="" selected="">Mau Terbang Dari Mana ?</option>
-                                      <option value="1">Jakarta</option>
-                                      <option value="2">Bali</option>
-                                      <option value="3">Medan</option>
-                                      <option value="4">...</option>
-                                  </select> -->
-                        </div>
-                      </div>
+          <div class="co">                   
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="ha1">
+                  <label for="select">Dari</label>
+                  <img class="ikonn" src="../Assets/train1.png">
+                  <div class="hihi">
+                    <select class="browser-default custom-select mb-4" id="select" required>
+                      <option value="1">Jakarta</option>
+                      <option value="2">Bali</option>
+                      <option value="3">Medan</option>
+                    </select>
+                  </div>                                   
+                </div>
+              </div>
                           
-                      <div class="col-sm-6">
-                        <div class="ha1">
-                          <label for="select">Ke</label>
-                          <img class="ikonn" src="../Assets/train2.png">
-                          <div class="hihi">
-                            <!-- <input type="text" placeholder="Kamu mau kemana?"> -->
-                            <input type="text" class="boxdk form-control" name="asal" placeholder="Kamu mau kemana?" required>
-                          </div>
-                        </div>
-                      </div> 
-
-                      <div class="col-sm-6">  
-                        <div class="ha1">
-                          <label for="start">Berangkat</label>
-                          <input type="text" id="depart" width="80%" placeholder="Departure" required/>
-                        </div>
-                      </div>
-                      <div class="col-sm-6" id="plg1">
-                        <div class="ha1">
-                          <label for="start">Pulang</label>
-                          <input type="text" id="return" width="80%" placeholder="Arrived" required/>
-                        </div>
-                      </div>
-
-                      <div class="ha1 col-md-3"> <br>
-                        <p>Jumlah Penumpang   : </p>
-                      </div>
-
-                      <div class="ha1 col-sm-1">
-                        <label for="penumpang">Dewasa</label> <br>
-                        <input type="number" name="Dewasa" class="qty" id="qty-dewasa" min="1" value="1" style="width:70px" >
-                        </div>
-                          
-                      
-                      <div class=" ha1 col-sm-1">
-                        <label for="penumpang">Bayi</label> <br>
-                        <input type="number" name="Dewasa" class="qty" id="qty-bayi" min="0" value="0" style="width:70px" >
-                      </div>
-
-                    </div>  
-                    <hr>
-                    <div class="row"> 
-                      <div class="tombol">
-                        <div class="ha1">
-                          <button type="submit" class="btn-cari btn-block btn-warning search-text" id="searchButton">
-                            Cari Perjalanan <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                          </svg>
-                        </button>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <!-- <div class="row"> 
-                      <div class="tombol">
-                        <div class="ha1">
-                          <button type="submit" class="btn-cari btn-block btn-warning search-text" id="searchButton">Cari Penerbangan</button>
-                        </div>
-                      </div>
-                    </div> -->
-                      
-                    
+              <div class="col-sm-6">
+                <div class="ha1">
+                  <label for="select">Ke</label>
+                  <img class="ikonn" src="../Assets/train2.png">
+                  <div class="hihi">
+                    <select class="browser-default custom-select mb-4" id="select" required>
+                      <option value="1">Jakarta</option>
+                      <option value="2">Bali</option>
+                      <option value="3">Medan</option>
+                    </select>
                   </div>
                 </div>
-              </form>
-            </div>
+              </div> 
 
-        <br><br>
-        <hr class="featurette-divider">
+              <div class="col-sm-6">  
+                <div class="ha1">
+                  <label for="start">Berangkat</label>
+                  <input type="text" id="depart" width="80%" placeholder="Departure" required/>
+                </div>
+              </div>
+              <div class="col-sm-6" id="plg1">
+                <div class="ha1">
+                  <input type="checkbox" id="check-pul" value="pulang">
+                  <label for="start">Pulang</label>
+                  <input type="text" id="return" width="80%" placeholder="Arrived" required disabled="disabled"/>
+                </div>
+              </div>
 
-        <div>
-          <h2 class="title-snk">Syarat dan Ketentuan Naik Kereta Api</h2>      
-          <div class="row">
-            <div class="col-md-1">
-              <br>
-              <!-- <center><img class="vaksin" src="../Assets/vaksin.png"></center> -->
-            </div>
-            <div class="col-md-10">
-              <br>
-              <p>Sesuai dengan SE Kementerian Perhubungan Nomor 80 Tahun 2022 untuk penumpang kereta api jarak jauh/antarkota di Pulau Jawa dan Sumatra wajib mengikuti peraturan berikut:</p>
-              <p class="font-weight-bold"> Usia 18 tahun ke atas : </p>
-              <span><ul class="text-justify">
+              <div class="ha1 col-md-3"> <br>
+                <p>Jumlah Penumpang   : </p>
+              </div>
 
-                <li class="font-weight-bold">Sudah divaksinasi dosis ke-3 (booster):</li>
-                <p>diperkenankan untuk melakukan perjalanan domestik dan tidak wajib menunjukkan hasil tes COVID-19.</p>
-                <li class="font-weight-bold">Sudah divaksinasi dosis ke-2 atau ke-1:</li>
-                <p>tidak diperkenankan untuk melakukan perjalanan domestik.</p>
-                <li class="font-weight-bold">Khusus WNA berasal dari perjalanan luar negeri:</li>
-                <p>vaksin dosis kedua dan tidak wajib melakukan tes COVID-19.</p> 
-              </ul> </span>
+              <div class="ha1 col-sm-1">
+                <label for="penumpang">Dewasa</label> <br>
+                <input type="number" name="Dewasa" class="qty" id="qty-dewasa" min="1" value="1" style="width:70px" >
+              </div>
+                                                
+              <div class=" ha1 col-sm-1">
+                <label for="penumpang">Bayi</label> <br>
+                <input type="number" name="Dewasa" class="qty" id="qty-bayi" min="0" value="0" style="width:70px" >
+              </div>
+            </div>  
+            
+            <hr>
+            <form action="">
+              <button type="submit" formaction="../tiket kereta/tiketkereta.html" class="btn-cari btn-block btn-warning search-text" id="searchButton">
+                Cari Kereta Api  
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                </svg>                                             
+              </button>                     
+            </form>                      
+          </div>
+        </div>
+      </form>
+    </div>
 
-              <hr><br>
-              <p class="font-weight-bold"> Anak usia 6-17 tahun : </p>
-              <span><ul class="text-justify">
+    <br><br>
+    <hr class="featurette-divider">
+    <div>
+      <h2 class="title-snk">Syarat dan Ketentuan Naik Kereta Api</h2>      
+      <div class="row">
+        <div class="col-md-1">
+          <br>
+        </div>
+          <div class="col-md-10">
+            <br>
+            <p>Sesuai dengan SE Kementerian Perhubungan Nomor 80 Tahun 2022 untuk penumpang kereta api jarak jauh/antarkota di Pulau Jawa dan Sumatra wajib mengikuti peraturan berikut:</p>
+            <p class="font-weight-bold"> Usia 18 tahun ke atas : </p>
+            <span><ul class="text-justify">
+              <li class="font-weight-bold">Sudah divaksinasi dosis ke-3 (booster):</li>
+              <p>diperkenankan untuk melakukan perjalanan domestik dan tidak wajib menunjukkan hasil tes COVID-19.</p>
+              <li class="font-weight-bold">Sudah divaksinasi dosis ke-2 atau ke-1:</li>
+              <p>tidak diperkenankan untuk melakukan perjalanan domestik.</p>
+              <li class="font-weight-bold">Khusus WNA berasal dari perjalanan luar negeri:</li>
+              <p>vaksin dosis kedua dan tidak wajib melakukan tes COVID-19.</p> 
+            </ul></span>
+            
+            <hr><br>
+            <p class="font-weight-bold"> Anak usia 6-17 tahun : </p>
+            <span><ul class="text-justify">
+              <li class="font-weight-bold">Sudah divaksinasi dosis ke-2:</li>
+              <p>tidak wajib menunjukkan hasil tes COVID-19.</p>
+              <li class="font-weight-bold">Baru divaksinasi dosis ke-1:</li>
+              <p>tidak diperkenankan untuk melakukan perjalanan domestik. </p>
+              <li class="font-weight-bold">Berasal dari perjalanan luar negeri dan belum divaksinasi:</li>
+              <p>dikecualikan dari persyaratan vaksinasi dan tidak wajib melakukan tes COVID-19.</p> 
+            </ul> </span>
 
-                <li class="font-weight-bold">Sudah divaksinasi dosis ke-2:</li>
-                <p>tidak wajib menunjukkan hasil tes COVID-19.</p>
-                <li class="font-weight-bold">Baru divaksinasi dosis ke-1:</li>
-                <p>tidak diperkenankan untuk melakukan perjalanan domestik. </p>
-                <li class="font-weight-bold">Berasal dari perjalanan luar negeri dan belum divaksinasi:</li>
-                <p>dikecualikan dari persyaratan vaksinasi dan tidak wajib melakukan tes COVID-19.</p> 
-              </ul> </span>
+            <hr><br>
+            <p class="font-weight-bold"> Anak di bawah 6 tahun : </p>
+            <span><ul class="text-justify">
+              <li class="font-weight-bold">Wajib </li>
+              <p>ditemani pendamping atau orang tua.</p>
+              <li class="font-weight-bold">Tidak wajib</li>
+              <p>menunjukkan hasil tes dan sertifikat vaksinasi COVID-19.</p>
+            </ul> </span>
 
-              <hr><br>
-              <p class="font-weight-bold"> Anak di bawah 6 tahun : </p>
-              <span><ul class="text-justify">
+            <hr><br>
+            <p class="font-weight-bold"> Kondisi kesehatan khusus </p>
+            <span><ul class="text-justify">
+              <li class="font-weight-bold">Wajib </li>
+              <p>menunjukkan surat keterangan dokter dari RS pemerintah.</p>
+              <li class="font-weight-bold">Tidak wajib</li>
+              <p>menunjukkan menunjukkan hasil tes dan sertifikat vaksinasi COVID-19.</p>
+            </ul> </span>
 
-                <li class="font-weight-bold">Wajib </li>
-                <p>ditemani pendamping atau orang tua.</p>
-                <li class="font-weight-bold">Tidak wajib</li>
-                <p>menunjukkan hasil tes dan sertifikat vaksinasi COVID-19.</p>
-              </ul> </span>
-
-              <hr><br>
-              <p class="font-weight-bold"> Kondisi kesehatan khusus </p>
-              <span><ul class="text-justify">
-
-                <li class="font-weight-bold">Wajib </li>
-                <p>menunjukkan surat keterangan dokter dari RS pemerintah.</p>
-                <li class="font-weight-bold">Tidak wajib</li>
-                <p>menunjukkan menunjukkan hasil tes dan sertifikat vaksinasi COVID-19.</p>
-              </ul> </span>
-
-              <hr><br>
-              <p class="font-weight-bold"> Pelaku perjalanan rutin dalam 1 wilayah aglomerasi </p>
-              <span><ul class="text-justify">
-
-                <li class="font-weight-bold">Dikecualikan dari aturan perjalanan diatas </li>
-              </ul> </span>
-            </div>
+            <hr><br>
+            <p class="font-weight-bold"> Pelaku perjalanan rutin dalam 1 wilayah aglomerasi </p>
+            <span><ul class="text-justify">
+              <li class="font-weight-bold">Dikecualikan dari aturan perjalanan diatas </li>
+            </ul> </span>
           </div>
         </div>
       </div>
