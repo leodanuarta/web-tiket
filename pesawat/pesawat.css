@@ -1,6 +1,8 @@
 #secNav{
     background-color: white;
     box-shadow: 0px 5px 30px #C9C7C7;
+    font-size: 14px;
+    font-family: Verdana, tiketOdysseyText, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 body{
@@ -12,7 +14,6 @@ body{
 .A1{
     margin-top: 100px;
     background-color: #B7D6DC;
-    /* height: 360px; */
     padding-top: 30px;
     padding-bottom: 10px;
 }
@@ -20,10 +21,8 @@ body{
 /* banner */
 .A2 {
     background-color: #B7D6DC;
-    /* width: 1262px;  */
     height: 80px;
     margin-top: -10px;
-    /* panjang bawah */
 }
 
 .title-snk{
@@ -59,6 +58,7 @@ body{
     border-radius: 5px;
     width: 100%;
     background-color: white;
+    padding-bottom: 25px;
 }
 
 /* logo */
@@ -109,24 +109,9 @@ body{
     border-right: 1px solid rgb(147, 147, 147);
 }
 
-/* .ha1{
-    margin-top: 10px;
-    width: 200px;
-    margin-left: 50px;
-    margin-bottom: 20px;
-}
-
-.ha11{
-    margin-top: 10px;
-    width: 100px;
-    margin-left: 50px;
-    margin-bottom: 20px;
-} */
-
 .ha1{
     margin-top: 10px;
-    width: 50%;
-    min-width: 150px;
+    width: 200px;
     margin-left: 50px;
     margin-bottom: 20px;
 }
@@ -140,7 +125,7 @@ body{
 
 .btn-cari{
     border-radius: 50px;
-    padding:10px;
+    padding: 10px;
     border:0px;
 }
 
