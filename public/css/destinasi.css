@@ -1,0 +1,42 @@
+#secNav{
+    background-color: white;
+    box-shadow: 0px 5px 30px #C9C7C7;
+}
+
+.awal{
+    background: url('Assets/bg_pemandangan.png') no-repeat center;
+    background-size: cover;
+}
+
+.gambar{
+    width: 500px;
+}
+
+.content{
+    text-align: justify;
+    text-indent: 0.4in;
+}
+
+.title{
+    text-align: center;
+}
+
+.title1{
+    text-align: left;
+    font-weight: 500;
+    margin-left: 17px;
+    margin-bottom: 10px;
+}
+
+.title-heading{
+    line-height:3;
+    text-align: center;
+    border-top: 1px solid #FEFEFE; 
+}
+
+.box{
+    box-shadow: 0px 2px 8px #C9C7C7;
+    padding-bottom: 10px;
+    position: fixed;
+    width: 20%;
+}

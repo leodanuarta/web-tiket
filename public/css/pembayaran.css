@@ -1,0 +1,115 @@
+*{
+    font-family: Verdana, tiketOdysseyText, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#secNav{
+    background-color: white;
+    z-index: auto;
+    font-size: 16px;
+    box-shadow: 0px 5px 30px #C9C7C7;
+}
+
+.box-item{
+    padding: 30px 60px;
+    margin-top: 20px;
+    box-shadow: 0px 5px 5px #C9C7C7;
+}
+
+.waktu{
+    margin-top: 10px;
+}
+
+.title{
+    font-size: 24px;
+    margin: 5px 10px;
+}
+
+.detail{
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0px;
+}
+
+.harga{
+    margin: 0px 10px;
+}
+
+.box{
+    margin: 20px 0px;
+    box-shadow: 0px 5px 5px #C9C7C7;
+    padding: 12px;
+}
+
+.box-item1{
+    background-color: blanchedalmond;
+    height: 50px;
+    width: auto;
+    text-align: center;
+    margin: -12px -12px;
+}
+
+.box2{
+    margin: 20px 0px;
+    box-shadow: 0px 5px 5px #C9C7C7;
+    padding: 12px;
+}
+
+.title1{
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 50px;
+}
+
+.logo{
+    border-bottom: 2px solid black;
+}
+
+.order{
+    text-align: center;
+    margin: 20px 0px;
+}
+
+.logobank{
+    padding: 5px 0px;
+}
+
+form#kode input[type=text]{
+    width: 85%;
+    height: auto;
+    padding: 1px 5px;
+    margin: 4px 5px 0px 20px;
+    font-size: 90%;  
+}
+
+form#kode input[type=text]:focus {
+    background: #E6E6FA;
+}
+
+.apply{
+    display: flex;
+    height: auto;
+    margin: 0px 0px 0px 20px;
+}
+
+.promo{
+    margin-top: 24px;
+}
+
+.btn-konfirm{
+    width: 200px;
+    height: 35px;
+    margin-left: auto;
+    margin-right: 80px;
+    border: none;
+    border-radius: 50px; 
+}
+
+.bank1{width: 600px;margin:auto;} 
+    label{display: block;}
+        /* style gambar */
+        label > input + img{ 
+          cursor:pointer;
+          border:2px solid transparent;
+        }
+    
