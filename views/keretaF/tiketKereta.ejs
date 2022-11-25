@@ -3,18 +3,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../Assets/logo1.svg" type="image/svg+xml" sizes="2x2">
+    <link rel="icon" href="/assets/logo1.svg" type="image/svg+xml" sizes="2x2">
     <title>Tiket Kereta | PigiPigi</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <link rel="stylesheet" href="tiketkereta.css">
+    <link rel="stylesheet" href="/css/tiketkereta.css">
   </head>
   <body>
     <!-- First Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light" id="firstnav">
       <div class="container">
-        <a class="navbar-brand" href="../main/main.html"><img src="../Assets/logo2.svg" width="150"></a>
+        <a class="navbar-brand" href="/"><img src="/assets/logo2.svg" width="150"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-chevron-double-down" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
@@ -23,13 +23,13 @@
         </button>
         <div class="collapse navbar-collapse flex-row justify-content-between" id="navbarCollapse">
           <div class="navbar-nav">
-            <a class="textNav nav-link font-weight-bold px-2" href="../pesawat/pesawat.html">Pesawat</a>
-            <a class="textNav nav-link font-weight-bold px-2 active" href="../kereta/kereta.html">Kereta</a> 
+            <a class="textNav nav-link font-weight-bold px-2" href="/pesawat">Pesawat</a>
+            <a class="textNav nav-link font-weight-bold px-2 active" href="/kereta">Kereta</a> 
           </div>
           <div class="navbar-nav">
-            <a class="nav-link font-weight-bold px-2 mr-2" href="../cek order/cekorder.html">Cek Order</a>
+            <a class="nav-link font-weight-bold px-2 mr-2" href="/cekorder">Cek Order</a>
             <form class="form-inline mt-2 mt-md-0">
-              <a class="nav-link bg-primary text-white font-weight-bold rounded px-3" href="../login/login.html">Login / Daftar</a>
+              <a class="nav-link bg-primary text-white font-weight-bold rounded px-3" href="/login">Login / Daftar</a>
             </form>
           </div>
         </div>
@@ -47,20 +47,28 @@
             Pilih Kereta Pergi
           </h3>
           <h6>
-            Jakarta
+            <% if (kota[0].stationID == asalK) { %>
+              <%= kota[0].namaKota %> ( <%= kota[0].stationID %> )
+            <% } else { %>
+              <%= kota[1].namaKota %> ( <%= kota[1].stationID %> )
+            <% } %>
             <span>
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
               </svg>
             </span>
-            Bandung
+            <% if (kota[0].stationID == tujuanK) { %>
+              <%= kota[0].namaKota %> ( <%= kota[0].stationID %> )
+            <% } else { %>
+              <%= kota[1].namaKota %> ( <%= kota[1].stationID %> )
+            <% } %>
             <span class="ml-4">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar3" viewBox="0 0 16 16">
                   <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
                   <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
               </svg>
             </span>
-            11/10/2022
+            <%= berangkatK %>
             <span class="ml-4">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
                 <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
@@ -68,13 +76,15 @@
                 <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
               </svg>
             </span>
-            1
+            <%= dewasaK %> Dewasa
+            <%= anakK %> Anak Anak
+            <%= bayiK %> Bayi
           </h6>
         </div>
 
         <div class="col-md-3 nav3">
           <form class="form-inline mt-2 mt-md-0">
-            <a class="nav-link bg-warning btn-block text-white font-weight-bold text-center px-3 mr-1 mt-3 btn-search" href="../pesawat/pesawat.html">Ubah Pencarian</a>
+            <a class="nav-link bg-warning btn-block text-white font-weight-bold text-center px-3 mr-1 mt-3 btn-search" href="/pesawat">Ubah Pencarian</a>
           </form>
         </div>
       </div>  
@@ -146,7 +156,7 @@
           <span class="harga-pesawat1">Rp</span>
           <span class="harga-pesawat2">100</span>
           <span class="harga-pesawat1">.888,-</span>
-          <a style="text-decoration: none;"  href="../data pemesan/datapemesank.html">
+          <a style="text-decoration: none;"  href="/kereta/tiket/data">
             <button type="submit" class="btn-caritiket bg-warning text-white font-weight-bold text-center">
               Pesan Tiket Pergi
             </button>
@@ -171,7 +181,7 @@
           <span class="harga-pesawat1">Rp</span>
           <span class="harga-pesawat2">100</span>
           <span class="harga-pesawat1">.888,-</span>
-          <a style="text-decoration: none;"  href="../data pemesan/datapemesank.html">
+          <a style="text-decoration: none;"  href="/kereta/tiket/data">
             <button type="submit" class="btn-caritiket bg-warning text-white font-weight-bold text-center">
               Pesan Tiket Pergi
             </button>
@@ -197,7 +207,7 @@
             <span class="harga-pesawat1">Rp</span>
             <span class="harga-pesawat2">100</span>
             <span class="harga-pesawat1">.888,-</span>
-            <a style="text-decoration: none;"  href="../data pemesan/datapemesank.html">
+            <a style="text-decoration: none;"  href="/kereta/tiket/data">
               <button type="submit" class="btn-caritiket bg-warning text-white font-weight-bold text-center">
                 Pesan Tiket Pergi
               </button>
@@ -222,7 +232,7 @@
             <span class="harga-pesawat1">Rp</span>
             <span class="harga-pesawat2">100</span>
             <span class="harga-pesawat1">.888,-</span>
-            <a style="text-decoration: none;"  href="../data pemesan/datapemesank.html">
+            <a style="text-decoration: none;"  href="/kereta/tiket/data">
               <button type="submit" class="btn-caritiket bg-warning text-white font-weight-bold text-center">
                 Pesan Tiket Pergi
               </button>
@@ -247,7 +257,7 @@
           <span class="harga-pesawat1">Rp</span>
           <span class="harga-pesawat2">100</span>
           <span class="harga-pesawat1">.888,-</span>
-          <a style="text-decoration: none;"  href="../data pemesan/datapemesank.html">
+          <a style="text-decoration: none;"  href="/kereta/tiket/data">
             <button type="submit" class="btn-caritiket bg-warning text-white font-weight-bold text-center">
               Pesan Tiket Pergi
             </button>
@@ -260,19 +270,19 @@
     <!-- Footer -->
     <footer class="foot">
       <div class="container">
-        <center><img class="imgFooter" src="../Assets/logo2.svg" width="150"></center><br>
+        <center><img class="imgFooter" src="/assets/logo2.svg" width="150"></center><br>
         <div>
           <div class="row d-flex justify-content-around">
             <div class="email text-center col-md-4">
-              <img src="../Assets/email.svg" width="50" height="50">
+              <img src="/assets/email.svg" width="50" height="50">
               <p><b>Email<br>cs@pigipigi.id</b></p>
             </div>
             <div class="whatsApp text-center col-md-4">
-              <img src="../Assets/wa.svg" width="50" height="50">
+              <img src="/assets/wa.svg" width="50" height="50">
               <p><b>WhatsApp<br>+62 812-3456-7890</b></p>
             </div>
             <div class="contact text-center col-md-4">
-              <img src="../Assets/call.svg" width="50" height="50">
+              <img src="/assets/call.svg" width="50" height="50">
               <p><b>Call Center<br>021(123-456-78)</b></p>
             </div>
           </div>
@@ -284,11 +294,11 @@
           <div class="col-md-5">
             <p class="text-center text-dark font-weight-bold" style="font-size: 150%;">Produk</p>
             <div class="d-flex justify-content-center">
-              <a style="text-decoration:none;"  href="../pesawat/pesawat.html">
+              <a style="text-decoration:none;"  href="/pesawat">
                 <img class="rounded-circle pesawat" src="https://banner2.cleanpng.com/20180521/qwy/kisspng-airplane-computer-icons-icon-design-5b02fd07a28226.7227895415269225036656.jpg" alt="Pesawat">
                 <p class="text-dark text-center mr-3">Pesawat</p>
               </a>
-              <a style="text-decoration:none;"  href="../kereta/kereta.html">
+              <a style="text-decoration:none;"  href="/kereta">
                 <img class="rounded-circle kereta" src="https://lh4.ggpht.com/fXuIHycU2zzzR9xakkQST8ItglkGOAHMYtmJDU9BuEIAmD9Pf23lssphUL8vCmle=w300" alt="Kereta">
                 <p class="text-dark text-center">Kereta</p>
               </a>
@@ -336,6 +346,6 @@
       <hr class="featurette-divider">
       <p class="text-center">&copy; 2022 Company, Inc. &bull; All Rights Reserved</p>
     </footer>
-    <script src="tiketkereta.js"></script>
+    <script src="/js/tiketkereta.js"></script>
   </body>
 </html>

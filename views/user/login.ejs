@@ -7,12 +7,12 @@
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <link rel="stylesheet" href="login.css">
-        <link rel="icon" href="../Assets/logo1.svg" type="image/svg+xml" sizes="2x2">
+        <link rel="stylesheet" href="/css/login.css">
+        <link rel="icon" href="/assets/logo1.svg" type="image/svg+xml" sizes="2x2">
     </head>
     <body>
         
-        <center><a href="../main/main.html"><img class="icon" src="../Assets/logo2.svg" width="150" ></a></center>
+        <center><a href="/"><img class="icon" src="/assets/logo2.svg" width="150" ></a></center>
 
         <div class="container">
             <div class="row">
@@ -31,7 +31,8 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Password</label>
-                                    <input type="password" name="password" id="password" class="form-control" aria-describedby="emailHelp" placeholder="Masukkan Password">
+                                    <span class="hsPw"><i id="eye" class="fa fa-eye-slash" aria-hidden="true"></i></span>
+                                    <input name="password" id="password" class="form-control" aria-describedby="emailHelp" placeholder="Masukkan Password" pw-shown="false">
                                 </div>
                                 <div class="form-group">
                                     <p class="text-center">Lupa Password ? <a href="#" id=""
@@ -129,6 +130,6 @@
         <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
-        <script src="login.js"></script>
+        <script src="/js/login.js"></script>
     </body>
 </html>
