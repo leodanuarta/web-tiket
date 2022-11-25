@@ -80,3 +80,11 @@ form .error{
 #second{
     display:none;
 }
+
+.hsPw{
+    margin-bottom: -25px;
+    margin-left: 90%;
+    position: relative;
+    z-index: top;
+    display: flex;
+}

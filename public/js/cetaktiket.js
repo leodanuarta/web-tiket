@@ -7,4 +7,3 @@ $(window).on('load', function() {
         $("#background-loading").css("transition","visibility 0s 1s, opacity 0.5s linear");
     },delay);
 });
-

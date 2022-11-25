@@ -97,3 +97,14 @@ function onChange() {
       confirm.setCustomValidity('Passwords do not match');
     }
 }
+
+$("#eye").click(function() {
+	var password = document.getElementById("password");
+  if (password.type === "password") {
+    password.type = "text";
+    $('#eye').toggleClass("fa-eye fa-eye-slash");
+  } else {
+    password.type = "password";
+    $('#eye').toggleClass("fa-eye-slash fa-eye");
+  }
+});
