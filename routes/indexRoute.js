@@ -11,7 +11,7 @@ const { destinasiBali,  destinasiJakarta, destinasiLombok
 , destinasiJogja, destinasiBogor} = require('../controllers/indexDestinasi');
 
 //source kereta
-const { kereta, pembayaranK, tiketK, datapemesanK, cetakTiketK, cariTiketK } = require('../controllers/indexKereta');
+const { kereta, pembayaranK, tiketK, datapemesanK, cetakTiketK } = require('../controllers/indexKereta');
 
 
 // source pesawat 
@@ -19,7 +19,10 @@ const { pesawat, datapemesanP, tiketP, pembayaranP, cetakTiketP, cariTiket } = r
 
 
 // source login
-const { loginReg } = require('../controllers/indexLogin');
+const { login } = require('../controllers/indexLogin');
+
+// source regist
+const { regist } = require('../controllers/indexRegister');
 
 
 // tarik file ejs disini
@@ -39,7 +42,6 @@ router.get("/destinasilombok", destinasiLombok);
 
 // folder kerta
 router.get("/kereta", kereta);
-router.post("/cariTiketK", cariTiketK);
 router.get("/kereta/tiket", tiketK);
 router.get("/kereta/tiket/data", datapemesanK);
 router.get("/kereta/tiket/bayar", pembayaranK);
@@ -56,7 +58,8 @@ router.get("/pesawat/tiket/bayar", pembayaranP);
 router.get("/pesawat/tiket/e-tiket", cetakTiketP);
 
 // folder users
-router.get("/login", loginReg);
+router.get("/login", login);
+router.get("/register", regist);
 
 
 module.exports = router;
