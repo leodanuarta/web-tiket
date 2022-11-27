@@ -77,14 +77,26 @@ form .error{
     color : #ff0000;
 }
 
-#second{
-    display:none;
-}
-
 .hsPw{
-    margin-bottom: -25px;
+    margin-bottom: -27px;
     margin-left: 90%;
     position: relative;
     z-index: top;
     display: flex;
+    
+}
+
+#eye{
+    background-color: white;
+    width: 30px;
+}
+
+#eye1{
+    background-color: white;
+    width: 30px;
+}
+
+#eye2{
+    background-color: white;
+    width:30px;
 }
