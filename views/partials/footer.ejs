@@ -1,6 +1,6 @@
 <footer class="foot">
   <div class="container">
-    <% if (page == 'kontak') { %>
+    <% if (page == 'kontak' || page == 'produk') { %>
       <center><img class="imgFooter" src="/assets/logo2.svg" width="150"></center><br>
       <div class="row d-flex justify-content-around">
         <div class="email text-center col-md-4">
@@ -19,7 +19,7 @@
       
       
       <br><br>
-      <%= if (page == 'produk') {%>
+      <% if (page == 'produk') {%>
       <div class="row">
         <div class="col-md-5">
           <p class="text-center text-dark font-weight-bold" style="font-size: 150%;">Produk</p>
@@ -71,9 +71,9 @@
         </div>
       </div>
       <% } %>
-    </div>
-    <hr class="featurette-divider">
-  <% } %>
+    <% } %>
+  </div>
+  <hr class="featurette-divider">
 
   <p class="text-center">&copy; 2022 Company, Inc. &bull; All Rights Reserved</p>
 </footer>
