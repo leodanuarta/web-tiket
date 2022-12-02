@@ -1,23 +1,16 @@
-const mysql = require('mysql');
-const dotenv = require('dotenv');
+require('dotenv').config();
+const { createClient } = require('@supabase/supabase-js')
 
-dotenv.config({ path: "./.env"});
+const supabaseUrl = 'https://jwdjglkmytcniuvtthbp.supabase.co'
+const supabaseKey = process.env.SUPABASE_KEY
 
-// create connection with database 
-const db = mysql.createConnection({
-  host: process.env.DATABASE_HOST,
-  database: process.env.DATABASE,
-  user: process.env.DATABASE_USER,
-  password: process.env.DATABASE_PASSWORD,
-
-})
-
-db.connect((err) => {
-  if (err) throw err;
-
-  console.log("database connected");
-
-  
-})
-
-module.exports = {db} ;
+const options = {
+  db: {
+    schema: 'public',
+  },
+  global: {
+    headers: { 'x-my-custom-header': 'my-app-name' },
+  },
+}
+const supabase = createClient(supabaseUrl, supabaseKey, options)
+module.exports = supabase;
