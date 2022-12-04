@@ -35,7 +35,7 @@ h1,h2,h3{
 
 .mybtn{
     border-radius: 50px;
-    
+    margin-bottom: 10px;
 }
 
 .login-or{
@@ -78,12 +78,19 @@ form .error{
 }
 
 .hsPw{
-    margin-bottom: -27px;
+    margin-bottom: -30px;
     margin-left: 90%;
     position: relative;
     z-index: top;
     display: flex;
-    
+}
+
+.hsPw1{
+    margin-bottom: -28px;
+    margin-left: 90%;
+    position: relative;
+    z-index: top;
+    display: flex;
 }
 
 #eye{

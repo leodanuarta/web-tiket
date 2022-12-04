@@ -1,8 +1,8 @@
 function promo(){
     let harga = $('#harga').text()
-    let hargaPromo;
+    let hargaPromo
     switch ($('#kodePromo').val()) {
-      case ('PIGIFLY') :
+      case ('GITRAIN') :
         hargaPromo = harga * 0.5
         console.log(harga)
         $('#harga').html('<del>' + harga + '</del>')
@@ -68,8 +68,8 @@ function promo(){
         $('#apply').attr("disabled", "disabled")
         $('#kodePromo').attr("disabled", "disabled")
         $('#message').html('<div class="text-success">SIP PROMO SUDAH TERPASANG</div>');
-        break;    
-  
+        break;
+      
       default: 
         $('#message').html('<div class="text-danger">KODE PROMO ANDA TIDAK VALID !</div>');
     }
