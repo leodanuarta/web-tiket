@@ -28,6 +28,12 @@
 
   <!-- Navbar -->
   <%- include('../partials/secondNavbar',  {page: 'kereta'}); %>
+<<<<<<< HEAD
+
+
+
+=======
+>>>>>>> ea05db05ab55d4700189275a6a1b0887629e7def
 
     <!-- Carousel -->
     <div id="carouselExampleIndicators" class="carousel slide A1" data-ride="carousel">
@@ -105,6 +111,76 @@
                       </select>
                     </div>                                   
                   </div>
+<<<<<<< HEAD
+                  <div class="co">                   
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <div class="ha1">
+                          <label for="select">Dari</label>
+                          <img class="ikonn" src="/assets/train1.png">
+                          <div class="hihi">
+                            <select name="asalK" class="browser-default custom-select mb-4" id="select" required>
+                              <% for (let kota of kotas) { %>
+                                <option name="kotaK" value="<%= kota.stationID %>"><%= kota.namaKota %></option>
+                              <% } %>
+                            </select>
+                          </div>                                   
+                        </div>
+                      </div>
+                          
+                      <div class="col-sm-6">
+                        <div class="ha1">
+                          <label for="select">Ke</label>
+                          <img class="ikonn" src="assets/train2.png">
+                          <div class="hihi">
+                            <select name="tujuanK" class="browser-default custom-select mb-4" id="select" required>
+                                <% for (let kota of kotas) { %>
+                                  <option value="<%= kota.stationID %>"><%= kota.namaKota %></option>
+                                <% } %>
+                            </select>
+                          </div>
+                        </div>
+                      </div> 
+
+                      <div class="col-sm-6">  
+                        <div class="ha1">
+                          <label for="start">Berangkat</label>
+                          <input name="berangkatK" type="text" id="depart" width="80%" placeholder="Departure" required/>
+                        </div>
+                      </div>
+                      <div class="col-sm-6" id="plg1">
+                      </div>
+
+                      <div class="ha1 col-md-3"> <br>
+                        <p>Jumlah Penumpang   : </p>
+                      </div>
+
+                      <div class="ha1 col-sm-2">
+                        <label for="penumpang">Dewasa</label> <br>
+                        <input name="dewasaK" type="number" name="Dewasa" class="qty" id="qty-dewasa" min="1" value="1" style="width:70px" >
+                        </div>
+
+                        <div class=" ha1 col-sm-2">
+                          <label for="penumpang">Anak-Anak</label> <br>
+                          <input name="anakK" type="number" name="Dewasa" class="qty" id="qty-bayi" min="0" value="0" style="width:70px" >
+                        </div>
+                          
+                      
+                      <div class=" ha1 col-sm-2">
+                        <label for="penumpang">Bayi</label> <br>
+                        <input name="bayiK" type="number" name="Dewasa" class="qty" id="qty-bayi" min="0" value="0" style="width:70px" >
+                      </div>
+
+                    </div>  
+                    <hr>
+                      <button type="submit" class="btn-cari btn-block btn-warning search-text" id="searchButton">
+                      Cari Kereta Api  
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                      </svg>                                             
+                      </button>
+=======
+>>>>>>> ea05db05ab55d4700189275a6a1b0887629e7def
                 </div>
                             
                 <div class="col-sm-6">

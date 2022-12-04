@@ -11,7 +11,7 @@ const { destinasiBali,  destinasiJakarta, destinasiLombok
 , destinasiJogja, destinasiBogor} = require('../controllers/indexDestinasi');
 
 //source kereta
-const { kereta, pembayaranK, tiketK, datapemesanK, cetakTiketK } = require('../controllers/indexKereta');
+const { kereta, pembayaranK, tiketK, datapemesanK, cetakTiketK, cariTiketK } = require('../controllers/indexKereta');
 
 
 // source pesawat 
@@ -42,6 +42,7 @@ router.get("/destinasilombok", destinasiLombok);
 
 // folder kerta
 router.get("/kereta", kereta);
+router.post("/cariTiketK", cariTiketK);
 router.get("/kereta/tiket", tiketK);
 router.get("/kereta/tiket/data", datapemesanK);
 router.get("/kereta/tiket/bayar", pembayaranK);
