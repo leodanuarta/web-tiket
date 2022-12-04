@@ -11,15 +11,9 @@
     <link rel="stylesheet" href="/css/tiketkereta.css">
   </head>
   <body>
-<<<<<<< HEAD
     <!-- First Navbar -->
-    <%- include('../partials/secondNavbar',  {page: 'kereta'}); %>
-
-
-=======
-   <!-- First Navbar -->
     <%- include('../partials/firstNavbar',  {page: 'kereta'}); %>
->>>>>>> ea05db05ab55d4700189275a6a1b0887629e7def
+    
     <!-- second navbar -->
     <nav class="navbar navbar-expand-lg navbar-light sticky-top" id="secnav">
       <div class="container">
@@ -61,7 +55,7 @@
               </svg>
             </span>
             <%= dewasaK %> Dewasa
-            <%= anakK %> Anak Anak
+            <%= anakK %> Anak 
             <%= bayiK %> Bayi
           </h6>
         </div>
@@ -74,79 +68,48 @@
       </div>  
     </nav>
     <br><br>
-    
-    <div class="order-form container d-flex justify-content-around">
-      <p>Filter : </p>
-      <div id="list1" class="dropdown-check-list" tabindex="100">
-        <span class="anchor">Nama Kereta</span>
-        <ul id="items1" class="items">
-          <li><input type="checkbox" />Argo Parahyangan </li>
-          <li><input type="checkbox" />Argo Parahyangan Tambahan </li>
-          <li><input type="checkbox" />Serayu </li>
-        </ul>
-      </div>
-      
-      <div id="list2" class="dropdown-check-list" tabindex="100">
-        <span class="anchor">Waktu</span>
-        <ul id="items2" class="items">
-          <li><input type="checkbox" />00.00 - 06.00</li>
-          <li><input type="checkbox" />06.00 - 12.00</li>
-          <li><input type="checkbox" />12.00 - 18.00</li>
-          <li><input type="checkbox" />18.00 - 24.00</li>
-        </ul>
-      </div>
-
-      <div id="list3" class="dropdown-check-list" tabindex="100">
-        <span class="anchor">Kelas</span>
-        <ul id="items3" class="items">
-          <li><input type="checkbox" />Ekonomi </li>
-          <li><input type="checkbox" />Bisnis </li>
-          <li><input type="checkbox" />Eksekutif </li>
-        </ul>
-      </div>
-    </div>
-    <br>
 
     <div style="background-color: #f2f2f2;"  class="order-form container mb-sm-2">
       <div class="row header">
         <div class="col-md-4">
           <p>Nama Kereta</p>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-2 text-center">
           <p>Berangkat</p>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-2 text-center">
           <p>Tiba</p>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 text-center">
           <p>Harga/orang</p>
         </div>
       </div>
 
-      <div class="row order"> 
-        <div class="col-md-4">
-          <h5 class="">ARGO PARAHYANGAN 38</h5>
-          <p>Ekonomi(Subclass Q)</p>
-        </div>
-        <div class="col-md-2">
-          <p>00.00</p>
-          <P style="margin-top: -10px">JAKARTA</P>
-        </div>
-        <div class="col-md-2"> 
-          <p>02.00</p>
-          <P style="margin-top: -10px">BANDUNG</P>
-        </div>
-        <div class="col-md-4">
-          <span class="harga-pesawat1">Rp</span>
-          <span class="harga-pesawat2">100</span>
-          <span class="harga-pesawat1">.888,-</span>
-          <a style="text-decoration: none;"  href="/kereta/tiket/data">
-            <button type="submit" class="btn-caritiket bg-warning text-white font-weight-bold text-center">
-              Pesan Tiket Pergi
-            </button>
-          </a> 
-        </div>
-      </div>
+      <% for (let tiketK of tiketKs) { %>
+          <div class="row order"> 
+            <div class="col-md-4">
+              <h5 class=""><%= tiketK.kereta.namaKereta %></h5>
+              <p><%= tiketK.kelas %></p>
+            </div>
+            <div class="col-md-2 text-center">
+              <p><%= tiketK.jamBerangkat %></p>
+              <P style="margin-top: -10px"><%= tiketK.kotaAsal %></P>
+            </div>
+            <div class="col-md-2 text-center"> 
+              <p><%= tiketK.jamTiba %></p>
+              <P style="margin-top: -10px"><%= tiketK.kotaTujuan %></P>
+            </div>
+            <div class="col-md-4 text-center">
+              <span class="harga-pesawat1">Rp</span>
+              <span class="harga-pesawat2"> <%= tiketK.harga %></span><br>
+              <a style="text-decoration: none;"  href="/kereta/tiket/data/<%= tiketK.ruteID %>/<%= berangkatK %>/<%= dewasaK %>/<%= anakK %>/<%= bayiK %>">
+                <button type="submit" class="btn-caritiket bg-warning text-white font-weight-bold text-center">
+                  Pesan Tiket Pergi
+                </button>
+              </a> 
+            </div>
+          </div>
+      <% } %>          
   </div>
 
     <br><hr>

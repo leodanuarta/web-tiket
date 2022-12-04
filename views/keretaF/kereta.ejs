@@ -28,12 +28,6 @@
 
   <!-- Navbar -->
   <%- include('../partials/secondNavbar',  {page: 'kereta'}); %>
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> ea05db05ab55d4700189275a6a1b0887629e7def
 
     <!-- Carousel -->
     <div id="carouselExampleIndicators" class="carousel slide A1" data-ride="carousel">
@@ -46,9 +40,6 @@
         <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
       </ol>
       <div class="carousel-inner">
-        <!-- <div class="carousel-item active">
-          <img class="d-block w-100" src="../Assets/carousel_1.png"  alt="First slide">
-        </div> -->
         <div class="carousel-item active">
           <img class="d-block w-100" src="/assets/carousel_2.png" alt="First slide">
         </div>
@@ -66,14 +57,12 @@
         </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" style="color: black;" class="bi bi-chevron-left" viewBox="0 0 16 16">
           <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
         </svg>
         <span class="sr-only">Previous</span>
       </a>
       <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" style="color: black;" class="bi bi-chevron-right" viewBox="0 0 16 16">
           <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
         </svg>
@@ -92,7 +81,7 @@
           <span><b style="margin-left: 10px;"> Cari Tiket di Bawah </b></span>
           <br>
         </div>
-        <form class="my-form" action="/cariTiketK" method="post">
+        <form class="my-form" action="/kereta/tiket" method="POST">
           <div class="container">
             <div class="form-group">
               <hr>
@@ -104,127 +93,61 @@
                     <label for="select">Dari</label>
                     <img class="ikonn" src="/assets/train1.png">
                     <div class="hihi">
-                      <select name="asalK" class="browser-default custom-select mb-4" id="select" required>
+                      <select name="asalK" class="browser-default custom-select mb-4" id="asalK" required>
                         <% for (let kota of kotas) { %>
                           <option name="kotaK" value="<%= kota.stationID %>"><%= kota.namaKota %></option>
                         <% } %>
                       </select>
                     </div>                                   
                   </div>
-<<<<<<< HEAD
-                  <div class="co">                   
-                    <div class="row">
-                      <div class="col-sm-6">
-                        <div class="ha1">
-                          <label for="select">Dari</label>
-                          <img class="ikonn" src="/assets/train1.png">
-                          <div class="hihi">
-                            <select name="asalK" class="browser-default custom-select mb-4" id="select" required>
-                              <% for (let kota of kotas) { %>
-                                <option name="kotaK" value="<%= kota.stationID %>"><%= kota.namaKota %></option>
-                              <% } %>
-                            </select>
-                          </div>                                   
-                        </div>
-                      </div>
-                          
-                      <div class="col-sm-6">
-                        <div class="ha1">
-                          <label for="select">Ke</label>
-                          <img class="ikonn" src="assets/train2.png">
-                          <div class="hihi">
-                            <select name="tujuanK" class="browser-default custom-select mb-4" id="select" required>
-                                <% for (let kota of kotas) { %>
-                                  <option value="<%= kota.stationID %>"><%= kota.namaKota %></option>
-                                <% } %>
-                            </select>
-                          </div>
-                        </div>
-                      </div> 
-
-                      <div class="col-sm-6">  
-                        <div class="ha1">
-                          <label for="start">Berangkat</label>
-                          <input name="berangkatK" type="text" id="depart" width="80%" placeholder="Departure" required/>
-                        </div>
-                      </div>
-                      <div class="col-sm-6" id="plg1">
-                      </div>
-
-                      <div class="ha1 col-md-3"> <br>
-                        <p>Jumlah Penumpang   : </p>
-                      </div>
-
-                      <div class="ha1 col-sm-2">
-                        <label for="penumpang">Dewasa</label> <br>
-                        <input name="dewasaK" type="number" name="Dewasa" class="qty" id="qty-dewasa" min="1" value="1" style="width:70px" >
-                        </div>
-
-                        <div class=" ha1 col-sm-2">
-                          <label for="penumpang">Anak-Anak</label> <br>
-                          <input name="anakK" type="number" name="Dewasa" class="qty" id="qty-bayi" min="0" value="0" style="width:70px" >
-                        </div>
-                          
-                      
-                      <div class=" ha1 col-sm-2">
-                        <label for="penumpang">Bayi</label> <br>
-                        <input name="bayiK" type="number" name="Dewasa" class="qty" id="qty-bayi" min="0" value="0" style="width:70px" >
-                      </div>
-
-                    </div>  
-                    <hr>
-                      <button type="submit" class="btn-cari btn-block btn-warning search-text" id="searchButton">
-                      Cari Kereta Api  
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                      </svg>                                             
-                      </button>
-=======
->>>>>>> ea05db05ab55d4700189275a6a1b0887629e7def
                 </div>
-                            
+                          
                 <div class="col-sm-6">
                   <div class="ha1">
                     <label for="select">Ke</label>
                     <img class="ikonn" src="assets/train2.png">
                     <div class="hihi">
-                      <select name="tujuanK" class="browser-default custom-select mb-4" id="select" required>
+                      <select name="tujuanK" class="browser-default custom-select mb-4" id="tujuanK" required>
                         <% for (let kota of kotas) { %>
                           <option value="<%= kota.stationID %>"><%= kota.namaKota %></option>
                         <% } %>
                       </select>
                     </div>
+                    <span class="" id="message"></span>
                   </div>
                 </div> 
+              </div>
 
+              <div class="row">
                 <div class="col-sm-6">  
                   <div class="ha1">
                     <label for="start">Berangkat</label>
                     <input name="berangkatK" type="text" id="depart" width="80%" placeholder="Departure" required/>
                   </div>
                 </div>
+              </div>
 
+              <div class="row">
                 <div class="ha1 col-md-3"> <br>
                   <p>Jumlah Penumpang   : </p>
                 </div>
 
-                <div class="ha1 col-sm-2">
+                <div class="ha11 col-md-3">
                   <label for="penumpang">Dewasa</label> <br>
                   <input name="dewasaK" type="number" name="Dewasa" class="qty" id="qty-dewasa" min="1" value="1" style="width:70px" >
                 </div>
 
-                <div class=" ha1 col-sm-2">
+                <div class=" ha11 col-md-3">
                   <label for="penumpang">Anak-Anak</label> <br>
                   <input name="anakK" type="number" name="Dewasa" class="qty" id="qty-bayi" min="0" value="0" style="width:70px" >
                 </div>
-                          
-                <div class=" ha1 col-sm-2">
+                
+                <div class=" ha11 col-md 3">
                   <label for="penumpang">Bayi</label> <br>
                   <input name="bayiK" type="number" name="Dewasa" class="qty" id="qty-bayi" min="0" value="0" style="width:70px" >
                 </div>
               </div>  
               <hr>
-
               <button type="submit" class="btn-cari btn-block btn-warning search-text" id="searchButton">
                 Cari Kereta Api  
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
@@ -250,6 +173,7 @@
             <p>Sesuai dengan SE Kementerian Perhubungan Nomor 80 Tahun 2022 untuk penumpang kereta api jarak jauh/antarkota di Pulau Jawa dan Sumatra wajib mengikuti peraturan berikut:</p>
             <p class="font-weight-bold"> Usia 18 tahun ke atas : </p>
             <span><ul class="text-justify">
+
               <li class="font-weight-bold">Sudah divaksinasi dosis ke-3 (booster):</li>
               <p>diperkenankan untuk melakukan perjalanan domestik dan tidak wajib menunjukkan hasil tes COVID-19.</p>
               <li class="font-weight-bold">Sudah divaksinasi dosis ke-2 atau ke-1:</li>
@@ -261,17 +185,19 @@
             <hr><br>
             <p class="font-weight-bold"> Anak usia 6-17 tahun : </p>
             <span><ul class="text-justify">
-              <li class="font-weight-bold">Sudah divaksinasi dosis ke-2:</li>
-              <p>tidak wajib menunjukkan hasil tes COVID-19.</p>
-              <li class="font-weight-bold">Baru divaksinasi dosis ke-1:</li>
-              <p>tidak diperkenankan untuk melakukan perjalanan domestik. </p>
-              <li class="font-weight-bold">Berasal dari perjalanan luar negeri dan belum divaksinasi:</li>
-              <p>dikecualikan dari persyaratan vaksinasi dan tidak wajib melakukan tes COVID-19.</p> 
+
+                <li class="font-weight-bold">Sudah divaksinasi dosis ke-2:</li>
+                <p>tidak wajib menunjukkan hasil tes COVID-19.</p>
+                <li class="font-weight-bold">Baru divaksinasi dosis ke-1:</li>
+                <p>tidak diperkenankan untuk melakukan perjalanan domestik. </p>
+                <li class="font-weight-bold">Berasal dari perjalanan luar negeri dan belum divaksinasi:</li>
+                <p>dikecualikan dari persyaratan vaksinasi dan tidak wajib melakukan tes COVID-19.</p> 
             </ul> </span>
 
             <hr><br>
             <p class="font-weight-bold"> Anak di bawah 6 tahun : </p>
             <span><ul class="text-justify">
+
               <li class="font-weight-bold">Wajib </li>
               <p>ditemani pendamping atau orang tua.</p>
               <li class="font-weight-bold">Tidak wajib</li>
@@ -281,6 +207,7 @@
             <hr><br>
             <p class="font-weight-bold"> Kondisi kesehatan khusus </p>
             <span><ul class="text-justify">
+
               <li class="font-weight-bold">Wajib </li>
               <p>menunjukkan surat keterangan dokter dari RS pemerintah.</p>
               <li class="font-weight-bold">Tidak wajib</li>
@@ -290,6 +217,7 @@
             <hr><br>
             <p class="font-weight-bold"> Pelaku perjalanan rutin dalam 1 wilayah aglomerasi </p>
             <span><ul class="text-justify">
+
               <li class="font-weight-bold">Dikecualikan dari aturan perjalanan diatas </li>
             </ul> </span>
           </div>
@@ -300,7 +228,6 @@
 
     <!-- Footer -->
     <%- include('../partials/footer',  {page: 'produk'}); %>
-    
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

@@ -9,30 +9,23 @@
     <title>Beli Tiket Kereta | Pigi Pigi</title>
 </head>
 <body>
-<<<<<<< HEAD
-    <!--Navbar -->
-    <%- include('../partials/tiketNavbar',  {page: 'bayar'}); %>
-
-=======
   <!--Navbar -->
   <%- include('../partials/tiketNavbar',  {page: 'bayar'}); %>
->>>>>>> ea05db05ab55d4700189275a6a1b0887629e7def
 
   <div class="container">
-    <div class="row">
-      <div class="col-md-8 box-item">
-      
-        <div class="row align-items-center logo">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-wallet" viewBox="0 0 16 16">
+    <form action="/kereta/tiket/e-tiket/<%= orderID[0].transaksiID + 7000 %>" method="POST">
+      <div class="row">
+        <div class="col-md-8 box-item">
+          <div class="row align-items-center logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-wallet" viewBox="0 0 16 16">
             <path d="M0 3a2 2 0 0 1 2-2h13.5a.5.5 0 0 1 0 1H15v2a1 1 0 0 1 1 1v8.5a1.5 1.5 0 0 1-1.5 1.5h-12A2.5 2.5 0 0 1 0 12.5V3zm1 1.732V12.5A1.5 1.5 0 0 0 2.5 14h12a.5.5 0 0 0 .5-.5V5H2a1.99 1.99 0 0 1-1-.268zM1 3a1 1 0 0 0 1 1h12V2H2a1 1 0 0 0-1 1z"/>
-          </svg>
-          <span class="title font-weight-bold">Pilih Metode Pembayaran</span>
-        </div>
-        <h5 style="padding-top: 20px">Transfer Bank :</h5>
-        <div class="row">
-          <div class="col-md-7">
-            <div class="bank1">
-              <form>
+            </svg>
+            <span class="title font-weight-bold">Pilih Metode Pembayaran</span>
+          </div>
+          <h5 style="padding-top: 20px">Transfer Bank :</h5>
+          <div class="row">
+            <div class="col-md-7">
+              <div class="bank1">
                 <label class="logobank">
                   <input type="radio" name="BANK" checked>
                   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Bank_Central_Asia.svg/80px-Bank_Central_Asia.svg.png">
@@ -62,70 +55,80 @@
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/ALFAMART_LOGO_BARU.png/80px-ALFAMART_LOGO_BARU.png">
                     <span class="mr-5">Alfamart</span>
                 </label>
-              </form>
+              </div>
             </div>
           </div>
-        </div>
-      </div> 
+        </div> 
 
-      <div class="col-md-4">
-        <div class="box">
-          <div class="box-item1">
-            <span class="title1">Detail Pesanan</span>
-          </div>
-          <div>
-            <h5 class="order">ORDER ID  08123</h5>
-            <div class="detail">
-              <h5>Argo Parahyangan 38</h5>
-              <h6>Ekonomi (Subclass Q)</h6>
-              <p>Jakarta 
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 18 18">
-                  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
-                </svg>
-                Bandung &bull; 11/10/2022 &bull; 00.00</p>
-            </div>
-            <hr color="black">
-            <div class="row harga justify-content-between">
-              <span>Total Harga</span>
-              <span>Rp100.888,00</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="box2">
-          <div class="box-item1">
-            <span class="title1">Kode Promo</span>
-          </div>
-          <div class="row promo">
-            <div>
-              <form id="kode">
-                <input class="kode" type="text" placeholder="Masukan Kode Promo">
-              </form>
+        <div class="col-md-4">
+          <div class="box">
+            <div class="box-item1">
+              <span class="title1">Detail Pesanan</span>
             </div>
             <div>
-              <button type="submit" class="rounded btn btn-warning apply">Apply</button>
+              <h5 class="order">
+                ORDER ID 
+                <%= orderID[0].transaksiID + 7000  %>
+              </h5>
+              <div class="detail">
+                <h5><%= dataK[0].kereta.namaKereta %> </h5>
+                <h6><%= dataK[0].kelas %> </h6>
+                <p><%= dataK[0].kotaAsal %>  
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 18 18">
+                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                  </svg>
+                  <%= dataK[0].kotaTujuan %> 
+                  &bull; 
+                  <%= tanggalK %>
+                  &bull; 
+                  <%= dataK[0].jamBerangkat %>
+                </p>
+              </div>
+              <hr color="black">
+              <div class="row harga justify-content-between">
+                <span>Total Harga</span>
+                <span>
+                  Rp
+                  <span id="harga"><%= dataK[0].harga * penumpang %> </span>
+                </span>
+              </div>
+              <div class="row harga rowPromo justify-content-between" id="rowPromo">
+              </div>
             </div>
           </div>
-          </div>
-        </div>
 
-        <form action="">
-          <button type="submit" formaction="/kereta/tiket/e-tiket" class="btn-konfirm btn-block btn-warning" id="ambilTiket">
+          <div class="box2">
+            <div class="box-item1">
+              <span class="title1">Kode Promo</span>
+            </div>
+            <div class="row promo">
+              <div>
+                <input class="kode" type="text" placeholder="Masukan Kode Promo" id="kodePromo">
+              </div>
+              <div>
+                <button onclick="promo()" type="button" id="apply" class="rounded btn btn-warning apply">Apply</button>
+              </div>
+              <div>
+                <span id="message"></span>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-konfirm btn-block btn-warning" id="ambilTiket">
             Konfirmasi 
           </button>                      
-        </form> 
-
+        </div>
       </div>
-
-        
-    </div>
+    </form> 
   </div>
 
   <br><hr>
   <!-- Footer -->
   <%- include('../partials/footer',  {page: 'kontak'}); %>
   
+
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+  <script src="/js/pembayaranK.js"></script>
 </body>
 </html>

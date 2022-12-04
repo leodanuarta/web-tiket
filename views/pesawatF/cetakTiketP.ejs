@@ -4,20 +4,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/cetaktiket.css">
+    <link rel="stylesheet" href="/css/cetaktiketP.css">
     <link rel="icon" href="/assets/logo1.svg" type="image/svg+xml" sizes="2x2">
     <title>Tiket Pesawat | Pigi Pigi</title>
 </head>
 <body>
-<<<<<<< HEAD
-    <!--Navbar -->
-    <%- include('../partials/tiketNavbar',  {page: 'cetak'}); %>
-
-=======
    <!--Navbar -->
+  <% if (ket == 'cekorder') { %>
+    <%- include('../partials/secondNavbar',  {page: 'cekorder'}); %>
+  <% } else { %>
    <%- include('../partials/tiketNavbar',  {page: 'cetak'}); %>
->>>>>>> ea05db05ab55d4700189275a6a1b0887629e7def
-
+  <% } %>
   <div id="background-loading">
     <span class="loading-text">LOADING</span>
     <div class="loader"></div>
@@ -25,15 +22,146 @@
 
   <br>
 
-  <div class="container" style="width: 65%; height: 100%; overflow: hidden;">
-    <iframe src="/assets/tiket.pdf" style="overflow: auto" width="100%" height="100%"></iframe>
+  <div class="container2">
+    <div class="row-navTiket">
+        <div class="col-logoPigi">
+            <img src="/assets/logo2.svg" width="170" height="170">      
+        </div>
+        <div class="col etiket text-right">
+            <h4>E-Tiket</h4>
+            <h6>Departure Flight</h6>
+        </div>
+    </div>
+    <div class="line"></div>
+    <div class="row box" style="margin-top: 2%;">
+      <div class="col-md-3 pl-4">
+        <% if (dataP[0].airlineID == "GA" ) { %>
+          <img style="width: 120;" src="/assets/GA.png">
+        <% } else if (dataP[0].airlineID == "QZ" ) { %>
+          <img style="width: 120;" class ="imgP" src="/assets/QZ.png">
+        <% } else if (dataP[0].airlineID == "JT" ) { %>
+          <img style="width: 120;" class ="imgP" src="/assets/JT.png">
+        <% } else if (dataP[0].airlineID == "ID" ) { %>
+          <img style="width: 120;" class ="imgP" src="/assets/ID.png">
+        <% } else if (dataP[0].airlineID == "QG" ) { %>
+          <img style="width: 120;" class ="imgP" src="/assets/QG.png">
+        <% } %>
+        <p class="pesawat">
+          <%= dataP[0].pesawat.namaMaskapai %>
+        </p>
+        <p style="margin-top: -10px">
+          <% if (dataP[0].kelas == 'FC') { %>
+            First Class
+          <% } else if (dataP[0].kelas == 'EC') { %>
+            Economy
+          <% } else { %>    
+            Business
+          <% } %> %>
+        </p>
+      </div>
+      <div class="col-md-5" style="padding-left: 50px;">
+        <h5><%= dataPenumpang[0].tanggalP %></h5>
+        <div class="bar1">
+          <span class="font-weight-bold"><%= dataP[0].jamBerangkat %></span>
+          <span class="mx-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+              <circle cx="8" cy="8" r="8"/>
+            </svg>
+          </span>
+          <span>
+           <%= dataP[0].asal.namaProvinsi %>
+           (<%= dataP[0].provinsiAsal %>)
+          </span>
+          <br>
+          <span class="bandara"><%=dataP[0].asal.namaBandara %> </span>
+        </div>
+        <br>
+        <div class="bar2">
+          <span class="font-weight-bold"><%= dataP[0].jamTiba %></span>
+          <span class="mx-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+            </svg>
+          </span>
+          <span>
+            <%= dataP[0].tujuan.namaProvinsi %>
+            (<%= dataP[0].provinsiTujuan %>)
+          </span>
+            <br>
+          <span class="bandara"><%= dataP[0].tujuan.namaBandara %> </span>
+        </div>
+      </div>
+
+      <div class="col-md-4" style="padding-left: 20px;">
+        <h4 class="judulorder">Order ID</h4>
+        <h3 class="judulorder1"> <%= orderID %> </h3>
+        <h4 class="judulorder">Airline Booking Code</h4>
+        <h3 class="judulorder1"> <%= dataP[0].ruteID %> </h3>
+      </div>
+    </div>
+    
+    <div class="garis"></div>
+
+    <div class="row box">
+      <div class="col-md-4 media">  
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-file-earmark-text" viewBox="0 0 16 16">
+          <path d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z"/>
+          <path d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L9.5 0zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"/>
+        </svg>
+          <span class="pesan media-body">Present e-ticket and passport at check-in</span>
+      </div>
+      <div class="col-md-4 media">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+          <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+          <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+        </svg>
+        <div class="pesan media-body">Check-in at least 90 minutes before departure</div>
+      </div>
+      <div class="col-md-4 media">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+          <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+        </svg>
+        <div class="media-body pesan"> All times shown are in local airport time</div>
+      </div>
+    </div>
+
+    <div class="garis"></div>
+
+    <div class="box">
+      <table class="table table-striped">
+    
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">No</th>
+            <th scope="col">Passanger(s)</th>
+            <th scope="col" class="text-center">No. Tiket</th>
+            <th scope="col" class="text-center">Fasilitas</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% dataPenumpang.forEach((data, index) => { %>
+            <tr>
+              <th scope="row"><%= index + 1 %></th>
+              <td><%= data.titleP %> <%= data.namadepP %> <%= data.namabelP %> </td>
+              <td class="text-center"><%= data.tiketpid %></td>
+              <td class="text-center"> 
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-briefcase" viewBox="0 0 16 16">
+                  <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5zm1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0zM1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5z"/>
+                </svg>
+              20 Kg
+              </td>
+            </tr>
+            <% }) %>
+        </tbody>
+      </table>
+    </div>
   </div>
-  
-  
+
 <br><hr>
   <!-- Footer -->
   <%- include('../partials/footer',  {page: 'kontak'}); %>
-  
+ 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
     <script src="/js/cetaktiket.js"></script>

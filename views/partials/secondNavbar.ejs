@@ -1,10 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="secNav">
   <div class="container">
-<<<<<<< HEAD
-    <a class="navbar-brand" href="/index"><img src="/assets/logo2.svg" width="150"></a>
-=======
     <a class="navbar-brand" href="/"><img src="/assets/logo2.svg" width="150"></a>
->>>>>>> ea05db05ab55d4700189275a6a1b0887629e7def
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-chevron-double-down" viewBox="0 0 16 16">
         <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
@@ -30,9 +26,17 @@
         <% } else { %>
           <a class="nav-link font-weight-bold px-2 mr-2" href="/cekorder">Cek Order</a>
         <% } %>
-        <form class="form-inline mt-2 mt-md-0">
-          <a class="nav-link bg-primary text-white font-weight-bold rounded px-3" href="/login">Login / Daftar</a>
-        </form>
+
+        <% if (page == 'index' && login == 'true') { %>
+          <span class="text-secondary font-weight-bold px-2 py-2 mr-2">Hi, <%= user[0].namadepan%> <%= user[0].namabelakang%>!</span>
+          <form action="/logout" class="form-inline mt-2 mt-md-0">
+            <button style="border:none;" class="nav-link bg-primary text-white font-weight-bold rounded px-3">Logout</button>
+          </form>
+        <% } else if (page == 'index' && login == 'false') { %>
+          <form class="form-inline mt-2 mt-md-0">
+            <a class="nav-link bg-primary text-white font-weight-bold rounded px-3" href="/login">Login / Daftar</a>
+          </form>
+        <% } %>
       </div>
     </div>
   </div>  
