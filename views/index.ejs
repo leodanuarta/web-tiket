@@ -12,11 +12,10 @@
   <body>
   <div class = "awal">
     <!-- First Navbar -->
-    <%- include('./partials/firstNavbar'); %>
-
+    <%- include('./partials/firstNavbar',  {page: 'index', login: 'false'}); %>
 
     <!-- Search Box-->
-    <div class="container-search d-flex justify-content-center" id="">
+    <!-- <div class="container-search d-flex justify-content-center" id="">
         <div class="input-group col-sm-7 input-group-lg">
             <div class="input-group-prepend">
                 <span class="input-group-text google"><img src="/assets/logo1.svg" width="48"></span>
@@ -32,8 +31,14 @@
                 </button>  
             </div>
         </div>
+    </div> -->
+    <div class="container text-center">
+      <span class="text">
+        <span id="tampilsalam"></span>
+        mo pi mana?
+      </span>
     </div>
-  
+    <br>
 
     <!-- Circle Icon -->
     <div class="row">
@@ -53,9 +58,7 @@
   </div>
 
   <!-- Second Navbar -->
-  <%- include('./partials/secondNavbar',  {page: 'index'}); %>
-
-
+  <%- include('./partials/secondNavbar',  {page: 'index', login: 'false'}); %>
 
   <!-- Carousel -->
   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -154,7 +157,7 @@
           <h2 class="title">Candi Prambanan</h2>
           <h3 class="subtitle">Jogja</h3>
           <p class="content">Candi Prambanan atau Candi Roro Jonggrang (bahasa Jawa: ꦕꦤ꧀ꦝꦶ​ꦥꦿꦩ꧀ꦧꦤꦤ꧀, translit. Candhi Prambanan) adalah kompleks candi Hindu (Syaiwa) terbesar di Indonesia yang dibangun pada abad ke-9 masehi. Candi ini dipersembahkan untuk Trimurti, tiga dewa utama Hindu yaitu dewa Brahma sebagai dewa pencipta, dewa Wisnu sebagai dewa pemelihara, dan dewa Siwa sebagai dewa pemusnah.</p>
-          <a class="content-link" href="#">Baca Selengkapnya ></a>
+          <a class="content-link" href="/destinasiJogja">Baca Selengkapnya ></a>
         </div>
       </div>
       <hr class="featurette-divider">
@@ -175,6 +178,7 @@
 
     <!-- Footer -->
     <%- include('./partials/footer',  {page: 'produk'}); %>
+
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
