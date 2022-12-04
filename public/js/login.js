@@ -85,13 +85,14 @@ $(function() {
     if(Pass === ""){
   
     }else if( Pass === Con_Pass){
-      $("#btn-daf").removeAttr("onclick")
+      $("#btn-daf").removeAttr("disabled")
       $('#confirm_password_msg').show()
     $("#confirm_password_msg").html('<div class="text-success">Password matched</div>')
     }else{
       $("#confirm_password").focus()
       $('#confirm_password_msg').show()
       $("#confirm_password_msg").html('<div class="text-danger">Password not matched!</div>')
+      $("#btn-daf").attr("disabled", "disabled")
     }
   }
   });
