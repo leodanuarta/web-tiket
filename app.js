@@ -4,7 +4,6 @@ const path = require("path");
 const express = require("express");
 
 const app = require('./src/core/server');
-const {db} = require('./database')
 
 
 

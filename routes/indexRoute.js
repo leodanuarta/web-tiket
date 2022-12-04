@@ -19,7 +19,10 @@ const { pesawat, datapemesanP, tiketP, pembayaranP, cetakTiketP, cariTiket } = r
 
 
 // source login
-const { loginReg } = require('../controllers/indexLogin');
+const { login } = require('../controllers/indexLogin');
+
+// source regist
+const { regist } = require('../controllers/indexRegister');
 
 
 // tarik file ejs disini
@@ -56,7 +59,8 @@ router.get("/pesawat/tiket/bayar", pembayaranP);
 router.get("/pesawat/tiket/e-tiket", cetakTiketP);
 
 // folder users
-router.get("/login", loginReg);
+router.get("/login", login);
+router.get("/register", regist);
 
 
 module.exports = router;

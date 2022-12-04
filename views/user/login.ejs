@@ -31,8 +31,8 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Password</label>
-                                    <span class="hsPw"><i id="eye" class="fa fa-eye-slash" aria-hidden="true"></i></span>
-                                    <input name="password" id="password" class="form-control" aria-describedby="emailHelp" placeholder="Masukkan Password" pw-shown="false">
+                                    <span class="hsPw"><i id="eye" class="fa fa-eye input-eye-icon"></i></span>
+                                    <input type="password" name="password" id="password" class="form-control" aria-describedby="emailHelp" placeholder="Masukkan Password" pw-shown="true">
                                 </div>
                                 <div class="form-group">
                                     <p class="text-center">Lupa Password ? <a href="#" id=""
@@ -58,63 +58,12 @@
                                     </p>
                                 </div>
                                 <div class="form-group">
-                                    <p class="text-center">Belum Punya Akun ? <a href="#" id="signup">Sign Up Disini</a></p>
+                                    <p class="text-center">Belum Punya Akun ? <a href="/register" id="signup">Sign Up Disini</a></p>
                                 </div>
                             </form>    
                         </div>
                     </div>
 
-                    <div id="second">
-                        <div class="myform form">
-                            <div class="col-md-12 text-center">
-                                <h1>Sign Up</h1>
-                            </div>
-
-                            <form action="" name="registration" id="regis">
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Nama Depan</label>
-                                    <input typ="text" name="firstname" class="form-control" id="firstname" aria-describedby="emailHelp" placeholder="Masukkan Nama Depan">
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Nama Belakang</label>
-                                    <input type="text" name="lastname" class="form-control" aria-describedby="emailHelp" placeholder="Masukkan Nama Belakang">
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Tanggal Lahir</label>
-                                    <input type="date" name="dob" class="form-control" id="dob" aria-describedby="emailHelp" placeholder="Masukkan Tanggal Lahir">
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">No telepon</label>
-                                    <input type="tel" name="notel" class="form-control" id="notel" aria-describedby="emailHelp" placeholder="Masukkan No Telepon">
-                                </div>
-                                <form action="" method="post" name="login">
-                                    <div class="form-group">
-                                        <label for="exampleInputEmail1">Email</label>
-                                        <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Masukkan email">     
-                                    </div>
-                                <div class="form-group">
-                                        <label for="exampleInputEmail1">Password</label>
-                                        <input type="password" name="password" id="password" class="form-control" aria-describedby="emailHelp" placeholder="Masukkan Password" onchange="onChange();">
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Confirm Password</label>
-                                    <input type="password" name="password2" id="password2" class="form-control" aria-describedby="emailHelp" placeholder="Masukkan Password" onchange="onChange();">
-                                </div>
-                                <div class="form-group text-center">
-                                    <input type="checkbox" name="tac" id="tac" class="" aria-describedby="emailHelp" placeholder="">  
-                                    <label for="exampleInputEmail1">By sign up you accept our <a href="#">Terms Of Us</a></label>
-                                </div>
-                                <div class="col-md-12 text-center">
-                                    <button type="submit" class="btn btn-block mybtn btn-warning tx-tfm mb-3" id="btn-daf">Daftar</button>
-                                </div>
-                                <div class="col-md 12">
-                                    <div class="form-group">
-                                        <p class="text-center">Sudah Memiliki Akun ?<a href="#" id="signin"> Login Dsini</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
                 </div>
             </div>
         </div>
@@ -124,12 +73,10 @@
             <p class="text-center">&copy; 2022 Company, Inc. &bull; All Rights Reserved</p>
         </footer>
 
-
-
         <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
         <script src="/js/login.js"></script>
-    </body>
+    </body>
 </html>

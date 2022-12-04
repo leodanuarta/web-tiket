@@ -1,7 +1,7 @@
-const loginReg = async (req, res, next) => {
+const login = async (req, res, next) => {
   return res.render('user/login')
 }
 
 module.exports ={
-  loginReg,
+  login,
 }
