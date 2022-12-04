@@ -3,7 +3,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Log in</title>
+        <title>Sign Up</title>
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -22,45 +22,44 @@
                             <div class="col-md-12 text-center">
                                 <h1>Sign Up</h1>
                             </div>
-
-                            <form action="" name="registration" id="regis">
+                            <form action="/login" method="POST" name="registration">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Nama Depan</label>
-                                    <input typ="text" name="firstname" class="form-control" id="firstname" aria-describedby="emailHelp" placeholder="Masukkan Nama Depan">
+                                    <label>Nama Depan</label>
+                                    <input type="text" name="firstname" class="form-control" id="firstname" aria-describedby="emailHelp" placeholder="Masukkan Nama Depan">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Nama Belakang</label>
+                                    <label>Nama Belakang</label>
                                     <input type="text" name="lastname" class="form-control" aria-describedby="emailHelp" placeholder="Masukkan Nama Belakang">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Tanggal Lahir</label>
+                                    <label>Tanggal Lahir</label>
                                     <input type="date" name="dob" class="form-control" id="dob" aria-describedby="emailHelp" placeholder="Masukkan Tanggal Lahir">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">No telepon</label>
+                                    <label>No telepon</label>
                                     <input type="tel" name="notel" class="form-control" id="notel" aria-describedby="emailHelp" placeholder="Masukkan No Telepon">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Email</label>
+                                    <label>Email</label>
                                     <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Masukkan email">     
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Password</label>
-                                    <span class="hsPw"><i id="eye1" class="fa fa-eye input-eye-icon"></i></span>
+                                    <label>Password</label>
+                                    <span class="hsPw1"><i id="eye1" class="fa fa-eye input-eye-icon"></i></span>
                                     <input type="password" name="password1" id="password1" class="form-control" aria-describedby="emailHelp" placeholder="Masukkan Password">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Confirm Password</label>
-                                    <span class="hsPw"><i id="eye2" class="fa fa-eye input-eye-icon"></i></span>
+                                    <label>Confirm Password</label>
+                                    <span class="hsPw1"><i id="eye2" class="fa fa-eye input-eye-icon"></i></span>
                                     <input type="password" name="confirm_password" id="confirm_password" class="form-control" aria-describedby="emailHelp" placeholder="Masukkan Password">                                      
                                     <span id="confirm_password_msg"></span>
                                 </div>
                                 <div class="form-group text-center">
                                     <input type="checkbox" name="tac" id="tac" class="" aria-describedby="emailHelp" placeholder="">  
-                                    <label for="exampleInputEmail1">By sign up you accept our <a href="#">Terms Of Us</a></label>
+                                    <label>By sign up you accept our <a href="#">Terms Of Us</a></label>
                                 </div>
                                 <div class="col-md-12 text-center">
-                                    <button type="submit" class="btn btn-block mybtn btn-warning tx-tfm mb-3" id="btn-daf" href="/">Daftar</button>
+                                    <button type="submit" class="btn btn-block mybtn btn-warning tx-tfm mb-3" id="btn-daf" >Daftar</button>
                                 </div>
                                 <div class="col-md 12">
                                     <div class="form-group">
