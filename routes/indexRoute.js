@@ -3,7 +3,7 @@ const { celebrate } = require('celebrate');
 const router = express.Router();
 
 // tanpa login
-const { getIndex, cekOrder,
+const { getIndex, cekOrder, Etiket, userIndex
 } = require('../controllers/indexController');
 
 // source destinasi tanpa login
@@ -11,26 +11,28 @@ const { destinasiBali,  destinasiJakarta, destinasiLombok
 , destinasiJogja, destinasiBogor} = require('../controllers/indexDestinasi');
 
 //source kereta
-const { kereta, pembayaranK, tiketK, datapemesanK, cetakTiketK, cariTiketK } = require('../controllers/indexKereta');
+const { kereta, pembayaranK, datapemesanK, cetakTiketK, cariTiketK } = require('../controllers/indexKereta');
 
 
 // source pesawat 
-const { pesawat, datapemesanP, tiketP, pembayaranP, cetakTiketP, cariTiket } = require('../controllers/indexPesawat');
+const { pesawat, datapemesanP, pembayaranP, cetakTiketP, cariTiket, Upesawat} = require('../controllers/indexPesawat');
 
 
 // source login
-const { login } = require('../controllers/indexLogin');
+const { login, userRegister, userLogin, userLogout} = require('../controllers/indexLogin');
 
 // source regist
-const { regist } = require('../controllers/indexRegister');
+const { register } = require('../controllers/indexRegister');
 
 
 // tarik file ejs disini
 // index.ejs
 router.get("/", getIndex);
+router.post("/", userIndex);
 
 // cekorder.ejs
 router.get("/cekorder", cekOrder);
+router.post("/cekorder/e-tiket", Etiket);
 
 // destinasi ejs
 router.get("/destinasibali", destinasiBali);
@@ -40,27 +42,34 @@ router.get("/destinasijogja", destinasiJogja);
 router.get("/destinasilombok", destinasiLombok);
 
 
-// folder kerta
+// folder kereta
 router.get("/kereta", kereta);
-router.post("/cariTiketK", cariTiketK);
-router.get("/kereta/tiket", tiketK);
-router.get("/kereta/tiket/data", datapemesanK);
-router.get("/kereta/tiket/bayar", pembayaranK);
-router.get("/kereta/tiket/e-tiket", cetakTiketK);
+router.post("/kereta/tiket", cariTiketK);
+router.get("/kereta/tiket/data/:ruteK/:berangkatK/:dewasaK/:anakK/:bayiK", datapemesanK);
+router.post("/kereta/tiket/bayar/:ruteK/:berangkatK/:dewasaK/:anakK/:bayiK", pembayaranK);
+router.post("/kereta/tiket/e-tiket/:orderID", cetakTiketK);
+
 
 
 // folder pesawat
 
 router.get("/pesawat", pesawat);
-router.post("/cariTiket", cariTiket);
-router.get("/pesawat/tiket", tiketP);
-router.get("/pesawat/tiket/data", datapemesanP);
-router.get("/pesawat/tiket/bayar", pembayaranP);
-router.get("/pesawat/tiket/e-tiket", cetakTiketP);
+router.post("/pesawat", Upesawat);
+router.post("/pesawat/tiket", cariTiket);
+router.get("/pesawat/tiket/data/:ruteP/:berangkatP/:dewasaP/:anakP/:bayiP", datapemesanP);
+router.post("/pesawat/tiket/bayar/:ruteP/:berangkatP/:dewasaP/:anakP/:bayiP", pembayaranP);
+router.post("/pesawat/tiket/e-tiket/:orderID", cetakTiketP);
+
 
 // folder users
+
 router.get("/login", login);
-router.get("/register", regist);
+router.post("/login", userRegister);
+router.get("/register", register);
+
+router.post("/user", userLogin);
+
+router.get("/logout", userLogout)
 
 
 module.exports = router;
